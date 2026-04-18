@@ -1,0 +1,105 @@
+# How to Update Stock Data - 3 Easy Methods
+
+Choose whichever method is most convenient for you!
+
+---
+
+## **Method 1: Full Update (Local PC)** ⚡
+
+**Best for:** When you want to update directly from your computer
+
+**Steps:**
+1. Double-click: **`Update Stock Data.bat`**
+2. Wait 1-2 minutes
+3. Done! Data is automatically pushed to GitHub
+
+**Requirements:**
+- ✅ Python installed
+- ✅ yfinance package installed
+- ✅ Internet connection
+
+---
+
+## **Method 2: Quick Update (GitHub Actions)** 🌐
+
+**Best for:** Quick updates without using your PC's resources
+
+**Steps:**
+1. Double-click: **`Quick Update.bat`**
+2. Browser opens to GitHub Actions page
+3. Click **"Run workflow"** button
+4. Wait 1-2 minutes
+5. Refresh your dashboard
+
+**Requirements:**
+- ✅ Internet connection only!
+- ✅ No Python needed
+
+---
+
+## **Method 3: Use the Local Updater Tool** 🛠️
+
+**Best for:** Visual progress tracking
+
+**Steps:**
+1. Double-click: **`update-data.html`**
+2. (First time only) Add your GitHub token to the file
+3. Click **"Update Stock Data"** button
+4. Watch real-time progress
+5. Wait 1-2 minutes
+6. Refresh your dashboard
+
+**Requirements:**
+- ✅ Internet connection
+- ✅ GitHub token (one-time setup)
+
+---
+
+## **Which Method Should I Use?**
+
+| Method | Speed | Requirements | Best For |
+|--------|-------|--------------|----------|
+| **Full Update** | Fastest | Python + Git | Regular use |
+| **Quick Update** | Fast | Internet only | Simplicity |
+| **Local Updater** | Medium | Internet + Token | Visual feedback |
+
+---
+
+## **After Updating:**
+
+1. **Wait 1-2 minutes** for the update to complete
+2. **Refresh your GitHub Pages dashboard**
+3. **New stock data appears!** ✨
+
+---
+
+## **Troubleshooting:**
+
+### **Error: "Python is not installed"**
+- Download Python from: https://www.python.org/downloads/
+- During install, check "Add Python to PATH"
+
+### **Error: "No module named 'yfinance'"**
+- Open Command Prompt and run: `pip install yfinance pandas`
+
+### **Error: "Failed to push to GitHub"**
+- Check your internet connection
+- Make sure you're logged into Git: `git config --global user.name "Your Name"`
+
+### **GitHub Actions not running**
+- Go to: https://github.com/mahmoudghanim/fx-sheet/actions
+- Check if the workflow is enabled
+- View logs for error details
+
+---
+
+## **Quick Reference:**
+
+- **Dashboard:** https://mahmoudghanim.github.io/fx-sheet/
+- **GitHub Repo:** https://github.com/mahmoudghanim/fx-sheet
+- **Actions Page:** https://github.com/mahmoudghanim/fx-sheet/actions
+- **Update Logs:** https://github.com/mahmoudghanim/fx-sheet/actions/workflows/update-stocks.yml
+
+---
+
+**That's it! Happy tracking! 📊🚀**
