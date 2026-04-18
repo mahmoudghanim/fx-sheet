@@ -49,6 +49,8 @@ Thumbs.db
 *.bat
 !Start Dashboard.bat
 !update_data.bat
+!Update Stock Data.bat
+!Quick Update.bat
 
 # PowerShell scripts (keep deployment ones)
 *.ps1
