@@ -72,3 +72,10 @@ Deploy*.bat
 Prepare*.bat
 setup_fxcm.bat
 install_forexconnect_sdk.bat
+
+# Security: Ignore files with tokens/credentials
+# Note: Add your configured index.html to .gitignore if it contains a token
+# Or use a separate config file
+*.env
+.env.local
+config.json

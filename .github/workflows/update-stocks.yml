@@ -2,9 +2,13 @@ name: Update FX Sheet Stock Data
 
 on:
   schedule:
-    # Update every hour (24 updates per day)
-    - cron: '0 * * * *'  # Runs at 00:00, 01:00, 02:00, etc. UTC
+    # Update every hour during market hours (Monday-Friday, 9:30 AM - 4:00 PM ET)
+    # UTC times: 14:30 - 21:00 (converts to 0 * * * 1-5 for every hour Mon-Fri)
+    - cron: '30 14-20 * * 1-5'  # Runs at 14:30, 15:30, 16:30, 17:30, 18:30, 19:30, 20:30 UTC (Mon-Fri)
   workflow_dispatch:  # Allows manual trigger
+
+permissions:
+  contents: write
 
 jobs:
   update-stocks:
@@ -13,6 +17,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -21,16 +27,45 @@ jobs:
     
     - name: Install dependencies
       run: |
+        python -m pip install --upgrade pip
         pip install yfinance pandas
     
     - name: Fetch stock data
       run: |
-        python fetch_yahoo_data.py
+        echo "Starting stock data update..."
+        python -c "
+        from fetch_yahoo_data import update_stock_data_with_yahoo
+        import sys
+        success = update_stock_data_with_yahoo()
+        if not success:
+            print('ERROR: Failed to fetch stock data')
+            sys.exit(1)
+        print('SUCCESS: Stock data updated')
+        "
+    
+    - name: Check if data was updated
+      id: check_changes
+      run: |
+        if git diff --quiet stocks-data.json; then
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+          echo "No changes detected in stock data"
+        else
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+          echo "Changes detected in stock data"
+        fi
     
     - name: Commit and push updated data
+      if: steps.check_changes.outputs.has_changes == 'true'
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add stocks-data.json
-        git commit -m "Auto-update stock data - $(date)" || exit 0
+        git commit -m "📊 Auto-update stock data - $(date -u '+%Y-%m-%d %H:%M UTC')"
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: No changes to commit
+      if: steps.check_changes.outputs.has_changes == 'false'
+      run: |
+        echo "Stock data is up to date. No commit needed."
