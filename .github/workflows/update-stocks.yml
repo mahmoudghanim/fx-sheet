@@ -1,0 +1,36 @@
+name: Update FX Sheet Stock Data
+
+on:
+  schedule:
+    # Update every 2 hours (adjust as needed)
+    - cron: '0 */2 * * *'  # Runs at 00:00, 02:00, 04:00, etc. UTC
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  update-stocks:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        pip install yfinance pandas
+    
+    - name: Fetch stock data
+      run: |
+        python fetch_yahoo_data.py
+    
+    - name: Commit and push updated data
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add stocks-data.json
+        git commit -m "Auto-update stock data - $(date)" || exit 0
+        git push

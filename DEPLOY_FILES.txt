@@ -1,0 +1,10 @@
+# Deploy to Shared Hosting - Quick Package
+# Upload ALL files in this folder to your web server
+
+Required Files:
+✓ index.html - Dashboard interface
+✓ stocks-data.json - Stock data
+✓ server_with_api.py - Server with stock management API
+✓ requirements.txt - Python dependencies
+✓ .htaccess - Apache configuration (if using Apache)
+✓ flask_app.py - Flask alternative for shared hosting

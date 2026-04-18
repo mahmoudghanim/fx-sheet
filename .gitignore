@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+fxcm_fetch.log
+yahoo_fetch.log
+
+# Large files
+*.exe
+python-3.7.9-amd64.exe
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Batch files (keep deployment ones)
+*.bat
+!Start Dashboard.bat
+!update_data.bat
+
+# PowerShell scripts (keep deployment ones)
+*.ps1
+!Start Dashboard.ps1
+
+# Deployment folders (we'll keep the source files)
+FX-Sheet-Deployment/
+InfinityFree-Upload/
+PythonAnywhere-Upload/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Documentation (keep main guides)
+DEPLOY_AWARDSPACE.txt
+DEPLOY_CPANEL_GUIDE.txt
+DEPLOY_INFINITYFREE.txt
+DEPLOY_TO_SHARED_HOSTING.txt
+Deploy*.bat
+Prepare*.bat
+setup_fxcm.bat
+install_forexconnect_sdk.bat

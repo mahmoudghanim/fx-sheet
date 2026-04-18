@@ -1,0 +1,111 @@
+================================================================================
+           DEPLOY TO WEB SERVER - SIMPLE GUIDE
+================================================================================
+
+YES! You can run this dashboard on a web server.
+
+Here are the EASIEST methods:
+
+================================================================================
+METHOD 1: STATIC HOSTING (EASIEST - NO PYTHON NEEDED)
+================================================================================
+
+Works on: GitHub Pages, Netlify, Vercel, any web host
+
+Files to upload:
+  ✓ index.html
+  ✓ stocks-data.json
+
+That's it! The dashboard works as a static website.
+
+DEPLOY TO NETLIFY (30 seconds):
+1. Go to: https://app.netlify.com/drop
+2. Drag the folder with index.html and stocks-data.json
+3. Done! You get a live URL
+
+DEPLOY TO GITHUB PAGES:
+1. Create GitHub repository
+2. Upload index.html and stocks-data.json
+3. Settings → Pages → Enable
+4. Your site: https://username.github.io/repo-name
+
+UPDATE DATA:
+- Run fetch_yahoo_data.py locally
+- Upload new stocks-data.json to your host
+
+================================================================================
+METHOD 2: PYTHON SHARED HOSTING
+================================================================================
+
+Works on: PythonAnywhere, cPanel with Python, etc.
+
+Files to upload:
+  ✓ index.html
+  ✓ stocks-data.json
+  ✓ flask_app.py
+  ✓ requirements.txt
+
+Steps:
+1. Upload all files to your hosting
+2. Install Flask: pip install flask
+3. Run: python flask_app.py
+4. Access: http://yourdomain.com:8001
+
+FOR PYTHONANYWHERE:
+1. Upload files
+2. Create Web App → Manual configuration
+3. Set WSGI file to use flask_app.py
+4. Add flask to dependencies
+
+================================================================================
+METHOD 3: VPS OR CLOUD SERVER
+================================================================================
+
+Works on: DigitalOcean, AWS, Linode, etc.
+
+1. Upload all files to server
+2. Install dependencies:
+   pip install flask gunicorn
+
+3. Run with Gunicorn (production):
+   gunicorn --bind 0.0.0.0:8001 flask_app:app
+
+4. Set up Nginx as reverse proxy (optional but recommended)
+
+5. Set up cron job to update data daily:
+   0 6 * * * python /path/to/fetch_yahoo_data.py
+
+================================================================================
+QUICK COMPARISON
+================================================================================
+
+Method              | Cost    | Difficulty | Auto-Update
+--------------------|---------|------------|-------------
+Static Hosting      | FREE    | Very Easy  | Manual
+PythonAnywhere      | FREE-5$ | Easy       | Yes (cron)
+VPS/Cloud           | $5-20   | Medium     | Yes (cron)
+GitHub Pages        | FREE    | Easy       | Manual (Git)
+
+================================================================================
+RECOMMENDED FOR YOU
+================================================================================
+
+For personal use:  Static Hosting (Netlify or GitHub Pages) - FREE
+For team use:      PythonAnywhere - FREE to $5/month
+For business:      VPS with automated updates - $5/month
+
+================================================================================
+NEED HELP?
+================================================================================
+
+Tell me which hosting platform you want to use, and I'll give you
+step-by-step instructions for that specific platform!
+
+Popular options:
+- Netlify (drag & drop - easiest)
+- GitHub Pages (free, reliable)
+- PythonAnywhere (Python support)
+- DigitalOcean (full control)
+- Your existing web host
+
+================================================================================

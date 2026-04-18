@@ -1,0 +1,322 @@
+================================================================================
+          PYTHONANYWHERE DEPLOYMENT GUIDE - FX SHEET DASHBOARD
+================================================================================
+
+DEPLOYMENT TIME: ~15-20 minutes
+COST: Free tier available (or $5/month for paid)
+
+================================================================================
+STEP 1: CREATE PYTHONANYWHERE ACCOUNT
+================================================================================
+
+1. Go to: https://www.pythonanywhere.com
+2. Click "Sign Up" 
+3. Choose plan:
+   - Beginner (FREE): Good for testing, limited CPU
+   - Hacker ($5/month): Recommended, more resources
+4. Complete registration and verify email
+5. Log in to your dashboard
+
+================================================================================
+STEP 2: UPLOAD FILES
+================================================================================
+
+You need to upload 4 files from the PythonAnywhere-Upload folder:
+  - flask_app.py
+  - index.html
+  - stocks-data.json
+  - requirements.txt
+
+METHOD 1: Using File Manager (Easiest)
+---------------------------------------
+1. In PythonAnywhere dashboard, click "Files" tab
+2. Navigate to: /home/yourusername/
+3. Create a new folder called "fx-sheet":
+   - Click "New directory"
+   - Name it: fx-sheet
+4. Enter the fx-sheet folder
+5. Upload files one by one:
+   - Click "Upload a file" button
+   - Select each file from your PythonAnywhere-Upload folder
+   - Upload all 4 files
+
+METHOD 2: Using Git (If you have GitHub)
+-----------------------------------------
+1. Push your files to a GitHub repository
+2. In PythonAnywhere, open Bash console
+3. Run:
+   cd ~
+   git clone https://github.com/yourusername/fx-sheet.git
+   mv fx-sheet fx-sheet
+
+VERIFY UPLOAD:
+--------------
+After uploading, you should see these files in /home/yourusername/fx-sheet/:
+  ✓ flask_app.py
+  ✓ index.html
+  ✓ stocks-data.json
+  ✓ requirements.txt
+
+================================================================================
+STEP 3: INSTALL DEPENDENCIES
+================================================================================
+
+1. In PythonAnywhere dashboard, go to "Consoles" tab
+2. Click "Bash" to open a bash console
+3. Run these commands:
+
+   cd /home/yourusername/fx-sheet
+   pip3.10 install --user -r requirements.txt
+
+   NOTE: Replace 3.10 with your Python version (3.8, 3.9, 3.10, 3.11)
+   
+   This will install:
+   - flask==3.0.0
+   - gunicorn==21.2.0
+
+4. Wait for installation to complete (1-2 minutes)
+5. You should see: "Successfully installed flask gunicorn"
+
+================================================================================
+STEP 4: CREATE WEB APP
+================================================================================
+
+1. In PythonAnywhere dashboard, click "Web" tab
+2. Click "Add a new web app"
+3. Select configuration:
+   - Choose "Manual configuration" (NOT Django/Flask/Bottle)
+   - Select Python version: 3.10 (or whichever you used)
+   
+4. Configure the web app:
+   
+   A. Source code:
+      - Code directory: /home/yourusername/fx-sheet
+      - Leave working directory blank
+   
+   B. Virtualenv (optional but recommended):
+      - Click "Enter virtualenv path"
+      - Enter: /home/yourusername/.local
+   
+   C. WSGI configuration file:
+      - Click on the WSGI link (it will open an editor)
+      - DELETE all existing content
+      - Paste this code:
+
+```python
+########## WSGI CONFIGURATION FOR FX SHEET DASHBOARD ##########
+
+import sys
+
+# Add your project directory to the sys.path
+path = '/home/yourusername/fx-sheet'
+if path not in sys.path:
+    sys.path.append(path)
+
+# Import the Flask app from flask_app.py
+from flask_app import app as application
+
+# That's it! The application variable is what PythonAnywhere needs
+```
+
+      - REPLACE "yourusername" with your actual PythonAnywhere username
+      - Click "Save" (top right)
+      - Close the editor
+
+================================================================================
+STEP 5: CONFIGURE WEB APP SETTINGS
+================================================================================
+
+In the Web tab, configure these settings:
+
+1. Static files section:
+   - Click "Add static files mapping" (optional, but improves performance)
+   - URL: /static
+   - Path: /home/yourusername/fx-sheet
+   
+2. Log files (for debugging):
+   - Error log: /var/log/yourusername.pythonanywhere.com/error.log
+   - Access log: /var/log/yourusername.pythonanywhere.com/access.log
+   - Server log: /var/log/yourusername.pythonanywhere.com/server.log
+
+3. Click the green "Reload" button at the top
+   - This applies all changes
+
+================================================================================
+STEP 6: TEST YOUR DEPLOYMENT
+================================================================================
+
+1. In the Web tab, you'll see your app URL:
+   https://yourusername.pythonanywhere.com
+
+2. Click the URL to open your dashboard
+
+3. You should see:
+   ✓ FX Sheet Dashboard loading
+   ✓ Stock data table with 463 stocks
+   ✓ Filters and pagination working
+   ✓ All features functional
+
+4. If you see an error:
+   - Check the error log (link in Web tab)
+   - Common issues:
+     * Wrong username in WSGI file
+     * Files not uploaded correctly
+     * Flask not installed
+
+================================================================================
+STEP 7: UPDATE STOCK DATA (IMPORTANT!)
+================================================================================
+
+Your dashboard is live, but you need to update the stock data regularly.
+
+MANUAL UPDATE:
+--------------
+1. Go to "Consoles" tab → Open Bash console
+2. Run:
+
+   cd /home/yourusername/fx-sheet
+   python3.10 fetch_yahoo_data.py
+
+3. Wait 5-10 minutes for the update
+4. Reload your dashboard in browser
+
+AUTOMATED DAILY UPDATE (Recommended):
+--------------------------------------
+1. In PythonAnywhere dashboard, go to "Tasks" tab
+2. Under "Scheduled tasks", add a new task:
+   
+   Time: 6:00 (or your preferred time, UTC)
+   Command: cd /home/yourusername/fx-sheet && python3.10 fetch_yahoo_data.py
+
+3. Click "Add task"
+4. This will automatically update stock data every day at 6 AM UTC
+
+NOTE: Free accounts can only run daily tasks (not hourly)
+      Paid accounts can run hourly tasks
+
+================================================================================
+STEP 8: CUSTOM DOMAIN (OPTIONAL)
+================================================================================
+
+If you want to use your own domain (e.g., fx.yourdomain.com):
+
+1. Go to "Web" tab
+2. Under "Domain name", click "Add another domain"
+3. Enter your domain: fx.yourdomain.com
+4. Configure DNS with your domain registrar:
+   - Create CNAME record pointing to: webapp-12345.pythonanywhere.com
+   (PythonAnywhere will show you the exact target)
+5. Wait 24-48 hours for DNS propagation
+6. Click "Reload" in Web tab
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+PROBLEM: "502 Bad Gateway" or "Error processing WSGI file"
+SOLUTION: 
+  - Check WSGI file has correct username
+  - Verify flask_app.py is uploaded
+  - Check error log for details
+
+PROBLEM: Dashboard loads but shows "Loading stock data..." forever
+SOLUTION:
+  - Check stocks-data.json is uploaded
+  - Open browser console (F12) for errors
+  - Verify file permissions
+
+PROBLEM: "ModuleNotFoundError: No module named 'flask'"
+SOLUTION:
+  - Reinstall flask: pip3.10 install --user flask
+  - Check virtualenv path is correct in Web tab
+
+PROBLEM: Stock data is outdated
+SOLUTION:
+  - Run manual update (Step 7)
+  - Check scheduled task is configured
+  - Verify fetch_yahoo_data.py is uploaded
+
+PROBLEM: Can't upload files
+SOLUTION:
+  - Check you're in correct directory: /home/yourusername/fx-sheet
+  - Free tier has 512MB storage limit
+  - Try using Git instead
+
+PROBLEM: Dashboard is slow
+SOLUTION:
+  - Free tier has limited CPU (this is normal)
+  - Upgrade to $5/month plan for better performance
+  - Optimize stocks-data.json file size
+
+================================================================================
+FILE STRUCTURE ON PYTHONANYWHERE
+================================================================================
+
+/home/yourusername/fx-sheet/
+├── flask_app.py              ← Flask web application
+├── index.html                ← Dashboard interface
+├── stocks-data.json          ← Stock data (updated regularly)
+├── requirements.txt          ← Python dependencies
+└── fetch_yahoo_data.py       ← Data update script (optional, for updates)
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+
+✓ Your dashboard URL: https://yourusername.pythonanywhere.com
+✓ Data updates: Run fetch_yahoo_data.py daily
+✓ Free tier: Limited CPU, runs on shared server
+✓ Paid tier ($5/month): Better performance, more features
+✓ SSL/HTTPS: Automatically provided by PythonAnywhere
+✓ Backups: Download stocks-data.json regularly
+
+================================================================================
+MAINTENANCE CHECKLIST
+================================================================================
+
+WEEKLY:
+□ Check dashboard is loading correctly
+□ Verify stock data is recent
+□ Check error logs for issues
+
+MONTHLY:
+□ Update dependencies: pip3.10 install --user -U flask
+□ Review failed stocks in update logs
+□ Download backup of stocks-data.json
+
+QUARTERLY:
+□ Check PythonAnywhere for platform updates
+□ Review and optimize stock data fetcher
+□ Consider upgrading plan if needed
+
+================================================================================
+SUPPORT RESOURCES
+================================================================================
+
+PythonAnywhere Help:
+- Docs: https://help.pythonanywhere.com/
+- Forums: https://www.pythonanywhere.com/forums/
+- Support: support@pythonanywhere.com
+
+FX Sheet Project:
+- Check Chat.txt for project history
+- See DEPLOYMENT_GUIDE.md for other hosting options
+- Local testing: Double-click "Start Dashboard.bat"
+
+================================================================================
+DEPLOYMENT COMPLETE! 🎉
+================================================================================
+
+Your FX Sheet Dashboard is now live on PythonAnywhere!
+
+Share your dashboard URL with others:
+https://yourusername.pythonanywhere.com
+
+Remember to:
+1. Set up automated daily data updates
+2. Monitor the dashboard regularly
+3. Keep stocks-data.json updated
+
+Enjoy tracking global stocks! 📈
+
+================================================================================

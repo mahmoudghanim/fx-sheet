@@ -1,0 +1,121 @@
+# 🚀 How to Run FX Sheet Dashboard on Windows
+
+## Quick Start (Easiest Method)
+
+### Method 1: Double-Click to Start
+1. **Double-click** `Start Dashboard.bat`
+2. The dashboard will **automatically open** in your browser
+3. **Keep the window open** while using the dashboard
+4. To stop: Close the window or press `Ctrl+C`
+
+### Method 2: PowerShell (Better Visual)
+1. **Right-click** `Start Dashboard.ps1`
+2. Select **"Run with PowerShell"**
+3. The dashboard will open automatically
+4. Keep the window open while using
+
+---
+
+## Accessing the Dashboard
+
+Once started, the dashboard is available at:
+- **URL**: http://localhost:8001
+- The browser opens automatically when you start the server
+
+---
+
+## Updating Stock Data
+
+To fetch the latest stock prices:
+
+### Option 1: Double-Click
+1. Double-click `update_data.bat`
+2. Wait for the update to complete (~5-10 minutes)
+3. Refresh your browser (Ctrl + Shift + R)
+
+### Option 2: Command Line
+```
+python fetch_yahoo_data.py
+```
+
+---
+
+## Features
+
+✅ **463 Global Stocks** - Real-time data from Yahoo Finance  
+✅ **Industry & Currency Filters** - Find stocks by sector  
+✅ **Clickable Stock Names** - Links to Yahoo Finance  
+✅ **Pagination** - Fast loading (50 stocks per page)  
+✅ **Sorting** - Click any column header to sort  
+✅ **Multiple Filters** - Country, industry, currency, price, volume  
+
+---
+
+## Troubleshooting
+
+### "Python is not installed" Error
+1. Download Python from: https://www.python.org/downloads/
+2. During installation, **check "Add Python to PATH"**
+3. Restart your computer
+4. Try running `Start Dashboard.bat` again
+
+### Dashboard Won't Open
+1. Make sure `server.py` is running (window should be open)
+2. Manually open: http://localhost:8001
+3. Check if port 8001 is already in use
+
+### Data Not Showing
+1. Run `update_data.bat` to fetch fresh data
+2. Wait for completion (shows progress)
+3. Refresh browser with Ctrl + Shift + R
+
+---
+
+## File Structure
+
+```
+FX Sheet/
+├── Start Dashboard.bat      ← Double-click to start
+├── Start Dashboard.ps1      ← PowerShell alternative
+├── update_data.bat          ← Update stock prices
+├── server.py                ← Web server
+├── fetch_yahoo_data.py      ← Data fetcher
+├── stocks-data.json         ← Stock data (auto-updated)
+└── index.html               ← Dashboard interface
+```
+
+---
+
+## System Requirements
+
+- ✅ Windows 10/11
+- ✅ Python 3.7 or higher
+- ✅ Internet connection (for stock data)
+- ✅ Web browser (Chrome, Edge, Firefox, etc.)
+
+---
+
+## Tips
+
+💡 **Pin to Taskbar**: Right-click `Start Dashboard.bat` → Pin to Taskbar  
+💡 **Create Shortcut**: Right-click → Create Shortcut → Place on Desktop  
+💡 **Auto-Refresh**: Dashboard auto-refreshes every 5 minutes  
+💡 **Bookmark**: Bookmark http://localhost:8001 in your browser  
+
+---
+
+## Need Help?
+
+Common commands:
+```
+# Update stock data
+python fetch_yahoo_data.py
+
+# Start server manually
+python server.py
+
+# Check Python version
+python --version
+```
+
+Enjoy tracking your stocks! 📈

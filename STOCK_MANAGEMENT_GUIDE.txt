@@ -1,0 +1,210 @@
+================================================================================
+        STOCK MANAGEMENT GUIDE - ADD & REMOVE STOCKS
+================================================================================
+
+OVERVIEW:
+---------
+The dashboard now includes a Stock Management panel that allows you to:
+✅ Add new stocks manually
+✅ Remove existing stocks
+✅ Import stocks from JSON data
+✅ Export current stock data
+
+================================================================================
+HOW TO ACCESS STOCK MANAGEMENT
+================================================================================
+
+1. Start the dashboard:
+   - Double-click "Start Dashboard.bat"
+   - OR run: python server_with_api.py
+
+2. Click the "⚙️ Manage Stocks" button in the header
+
+3. The management panel will appear with 3 tabs:
+   - ➕ Add Stock
+   - ➖ Remove Stock
+   - 📥 Import
+
+================================================================================
+ADDING A NEW STOCK
+================================================================================
+
+Step 1: Click "⚙️ Manage Stocks"
+Step 2: Click "➕ Add Stock" tab
+Step 3: Fill in the form:
+
+Required Fields:
+  - Stock Code*: Format like "AAPL.us", "TSLA.us", "ADS.de"
+  - Company Name*: Full company name
+
+Optional Fields:
+  - Country: e.g., United States, Germany, Japan
+  - Industry: e.g., Technology, Healthcare, Finance
+  - Currency: e.g., USD, EUR, GBP, JPY
+  - Exchange: e.g., NASDAQ, NYSE, XETRA
+  - Current Price: Stock price
+  - Volume: Trading volume
+  - 52 Week Low: 52-week low price
+  - 52 Week High: 52-week high price
+
+Step 4: Click "➕ Add Stock"
+Step 5: Stock is added immediately and saved!
+
+Example:
+  Stock Code: TSLA.us
+  Company Name: Tesla Inc.
+  Country: United States
+  Industry: Auto Manufacturers
+  Currency: USD
+  Exchange: NASDAQ
+
+================================================================================
+REMOVING A STOCK
+================================================================================
+
+Step 1: Click "⚙️ Manage Stocks"
+Step 2: Click "➖ Remove Stock" tab
+Step 3: (Optional) Use search box to find the stock
+Step 4: Click "Remove" button next to the stock
+Step 5: Confirm the removal
+Step 6: Stock is removed immediately and saved!
+
+Tip: The search box filters stocks by code or name in real-time.
+
+================================================================================
+IMPORTING STOCKS
+================================================================================
+
+Step 1: Click "⚙️ Manage Stocks"
+Step 2: Click "📥 Import" tab
+Step 3: Paste JSON data in the text area
+
+JSON Format:
+[
+  {
+    "code": "TSLA.us",
+    "name": "Tesla Inc.",
+    "country": "United States",
+    "industry": "Auto Manufacturers",
+    "currency": "USD",
+    "exchange": "NASDAQ"
+  },
+  {
+    "code": "NVDA.us",
+    "name": "NVIDIA Corporation",
+    "country": "United States",
+    "industry": "Semiconductors",
+    "currency": "USD"
+  }
+]
+
+Step 4: Click "📥 Import Stocks"
+Step 5: Stocks are added (duplicates are skipped automatically)
+
+Required Fields for Import:
+  - code
+  - name
+
+Optional Fields:
+  - country, industry, currency, exchange
+  - price, volume, week52Low, week52High
+  - changeAmount, change52W, product
+
+================================================================================
+EXPORTING STOCKS
+================================================================================
+
+Step 1: Click "⚙️ Manage Stocks"
+Step 2: Click "📥 Import" tab
+Step 3: Click "📤 Export Current Data"
+Step 4: File downloads as "stocks-data-export.json"
+
+Use the exported file to:
+  - Backup your stock list
+  - Import to another dashboard
+  - Edit in a text editor and re-import
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+
+1. Server Requirement:
+   - You MUST use "server_with_api.py" for saving to work
+   - Old "server.py" won't save changes to file
+   - Changes are saved to stocks-data.json automatically
+
+2. Starting with API Support:
+   python server_with_api.py
+
+3. Data Persistence:
+   - All changes are saved immediately to stocks-data.json
+   - No need to manually save
+   - Changes persist after browser refresh
+
+4. Fetching Updated Data:
+   - After adding stocks, you can run: python fetch_yahoo_data.py
+   - This will fetch real-time prices for new stocks
+   - New stocks will be included in the next data update
+
+5. Backup Recommendation:
+   - Before making changes, export your current data
+   - Keep a backup of stocks-data.json
+
+================================================================================
+QUICK COMMANDS
+================================================================================
+
+Start dashboard with API:
+  python server_with_api.py
+
+Update stock data (includes new stocks):
+  python fetch_yahoo_data.py
+
+Backup current data:
+  Copy stocks-data.json to stocks-data-backup.json
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problem: Stock not saving
+Solution: Make sure you're using server_with_api.py (not server.py)
+
+Problem: "Stock code already exists"
+Solution: Each stock code must be unique. Use a different code or remove the existing one first.
+
+Problem: Import failed
+Solution: Check JSON format. Use a JSON validator like https://jsonlint.com/
+
+Problem: Can't find stock to remove
+Solution: Use the search box to filter the list
+
+================================================================================
+EXAMPLE USE CASES
+================================================================================
+
+1. Add a missing stock:
+   - Found a stock not in the list? Add it manually!
+   - Fill in the details and it's ready to track
+
+2. Remove unwanted stocks:
+   - Clean up your watchlist
+   - Remove stocks you no longer track
+
+3. Import from Excel:
+   - Export your Excel list to JSON
+   - Import all at once
+
+4. Share your watchlist:
+   - Export your stocks
+   - Share the JSON file with others
+   - They can import it to their dashboard
+
+5. Create custom portfolios:
+   - Export current data
+   - Edit to create different portfolios
+   - Import different lists as needed
+
+================================================================================
+ENJOY MANAGING YOUR STOCKS!
+================================================================================

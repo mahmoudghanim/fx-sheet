@@ -1,0 +1,531 @@
+================================================================================
+        FREE PYTHON WEB HOSTING - BEST OPTIONS 2026
+================================================================================
+
+Here are the BEST free hosting platforms that support Python:
+
+================================================================================
+🥇 OPTION 1: PythonAnywhere (RECOMMENDED FOR YOU)
+================================================================================
+
+✅ **Pros:**
+- Purpose-built for Python (easiest for beginners)
+- FREE tier available forever
+- Built-in code editor and Bash console
+- FREE MySQL database
+- No credit card required
+- Always-on (no sleep)
+- Perfect for Flask apps
+
+❌ **Limitations:**
+- 1 web app only
+- 100 CPU-seconds per day
+- Outbound HTTP restricted to whitelisted sites
+  (Yahoo Finance IS whitelisted! ✓)
+- No custom domain on free tier
+- URL: yourusername.pythonanywhere.com
+
+⭐ **Perfect for FX Sheet Dashboard!**
+
+**Sign Up:** https://www.pythonanywhere.com
+
+---
+
+================================================================================
+🥈 OPTION 2: Render
+================================================================================
+
+✅ **Pros:**
+- 750 hours per month (enough for 1 app 24/7)
+- Automatic deployment from GitHub
+- Free managed PostgreSQL (90 days)
+- No credit card required
+- Custom domains supported
+- Good performance
+
+❌ **Limitations:**
+- App sleeps after 15 min inactivity
+- 30-50 second cold start
+- Limited resources on free tier
+
+**Sign Up:** https://render.com
+
+---
+
+================================================================================
+🥉 OPTION 3: Railway
+================================================================================
+
+✅ **Pros:**
+- Excellent developer experience
+- Auto-detection of Python apps
+- Built-in database support
+- Very fast deployment
+
+❌ **Limitations:**
+- $5 free trial credits (one-time)
+- Then $1/month subscription
+- NOT truly free long-term
+
+**Sign Up:** https://railway.app
+
+---
+
+================================================================================
+OPTION 4: Google Cloud Run
+================================================================================
+
+✅ **Pros:**
+- Generous free tier (180,000 vCPU-seconds/month)
+- Scales to zero
+- Full Docker support
+- Enterprise-grade infrastructure
+- 2 million requests/month
+
+❌ **Limitations:**
+- Requires credit card
+- More complex setup
+- Need Docker knowledge
+- Cold starts 2-5 seconds
+
+**Sign Up:** https://cloud.google.com/run
+
+---
+
+================================================================================
+OPTION 5: Vercel (Serverless Python)
+================================================================================
+
+✅ **Pros:**
+- Very fast deployment
+- Automatic HTTPS
+- Custom domains
+- Git integration
+
+❌ **Limitations:**
+- Serverless functions only (not full Flask app)
+- No persistent processes
+- No WebSockets
+- Better for API endpoints, not full apps
+
+**Sign Up:** https://vercel.com
+
+---
+
+================================================================================
+🏆 RECOMMENDATION: PythonAnywhere for FX Sheet Dashboard
+================================================================================
+
+**Why PythonAnywhere is BEST for you:**
+
+1. ✅ FREE forever
+2. ✅ Built for Python (no Docker needed)
+3. ✅ Yahoo Finance API is whitelisted
+4. ✅ Always-on (no sleep)
+5. ✅ Easy setup (5 minutes)
+6. ✅ No credit card required
+7. ✅ Built-in file editor
+8. ✅ Perfect for Flask + stock data
+
+**URL you'll get:** https://yourusername.pythonanywhere.com
+
+---
+
+================================================================================
+DEPLOY TO PYTHONANYWHERE - STEP BY STEP
+================================================================================
+
+STEP 1: Sign Up
+---------------
+1. Go to: https://www.pythonanywhere.com
+2. Click "Create a Beginner account" (FREE)
+3. Choose username: (this will be in your URL)
+4. Enter email and password
+5. Verify email
+
+STEP 2: Upload Files
+--------------------
+1. Login to PythonAnywhere
+2. Go to "Files" tab
+3. Click "Upload a file"
+4. Upload these files:
+   ✓ index.html
+   ✓ stocks-data.json
+   ✓ flask_app.py
+   ✓ requirements.txt
+
+STEP 3: Create Web App
+----------------------
+1. Go to "Web" tab
+2. Click "Add a new web app"
+3. Choose "Manual configuration"
+4. Select Python 3.10 (or latest available)
+5. Click "Next"
+
+STEP 4: Configure WSGI File
+----------------------------
+1. Click on "WSGI configuration file" link
+2. Delete ALL existing code
+3. Add this code:
+
+```python
+import sys
+path = '/home/yourusername/fx-sheet'
+if path not in sys.path:
+    sys.path.append(path)
+
+from flask_app import app as application
+```
+
+4. Replace "yourusername" with your actual username
+5. Save the file (Ctrl + S)
+
+STEP 5: Set Up Virtual Environment
+-----------------------------------
+1. Go to "Web" tab
+2. In "Virtualenv" section, enter:
+   /home/yourusername/.virtualenvs/fx-sheet
+
+3. Click "Enter" to create it
+
+STEP 6: Install Flask
+---------------------
+1. Open Bash console (from Consoles tab)
+2. Run these commands:
+
+```bash
+# Create virtual environment
+mkvirtualenv --python=/usr/bin/python3.10 fx-sheet
+
+# Install Flask
+pip install flask==3.0.0
+
+# Or install from requirements.txt
+cd /home/yourusername
+pip install -r requirements.txt
+```
+
+STEP 7: Set Static Files
+-------------------------
+1. Go to "Web" tab
+2. Scroll to "Static files" section
+3. Add these mappings:
+
+URL: /
+Path: /home/yourusername/
+
+OR better:
+URL: /static
+Path: /home/yourusername/
+
+4. Click "Add" after each
+
+STEP 8: Reload Web App
+----------------------
+1. Go to "Web" tab
+2. Click the green "Reload" button
+3. Wait for confirmation
+
+STEP 9: Test Your Dashboard
+----------------------------
+Visit: https://yourusername.pythonanywhere.com/
+
+You should see:
+✓ Dashboard loads
+✓ All 463 stocks display
+✓ Filters work
+✓ Sorting works
+✓ Yahoo Finance links work
+
+STEP 10: Enable Stock Management API (Optional)
+-------------------------------------------------
+If you want add/remove stocks from dashboard:
+
+1. Edit flask_app.py to include API endpoints
+2. Already included in your flask_app.py!
+3. Just make sure it's uploaded
+
+---
+
+================================================================================
+PYTHONANYWHERE FREE TIER - WHAT YOU NEED TO KNOW
+================================================================================
+
+Resource Limits:
+- 1 web app
+- 100 CPU-seconds per day
+  (Enough for ~500-1000 page views)
+- 512 MB disk space
+  (You're using ~1MB, plenty of room)
+- No always-on guarantee
+  (But usually stays up)
+
+Yahoo Finance Access:
+✓ Yahoo Finance IS whitelisted!
+✓ You can fetch stock data
+✓ API calls work perfectly
+
+Daily Limits:
+- 100 CPU-seconds = ~1.6 minutes of processing
+- Dashboard loading uses ~0.1-0.2 seconds
+- Can handle ~500-1000 page loads per day
+- Perfect for personal use!
+
+If you exceed limits:
+- App pauses until next day
+- No extra charges
+- Just wait for reset
+
+---
+
+================================================================================
+UPDATING STOCK DATA ON PYTHONANYWHERE
+================================================================================
+
+METHOD 1: Upload Manually
+--------------------------
+1. Run locally: python fetch_yahoo_data.py
+2. Upload new stocks-data.json via Files tab
+3. Overwrite old file
+4. Refresh browser
+
+METHOD 2: Use PythonAnywhere Console
+--------------------------------------
+1. Open Bash console
+2. Upload fetch_yahoo_data.py
+3. Run: python fetch_yahoo_data.py
+4. Data updates on server!
+
+METHOD 3: Create Task (Paid feature)
+-------------------------------------
+- Scheduled tasks require paid plan ($5/month)
+- Free tier: manual updates only
+
+METHOD 4: From Dashboard API
+------------------------------
+1. Click "Manage Stocks" in dashboard
+2. Add/remove stocks
+3. Changes save automatically
+4. Works if API is enabled!
+
+---
+
+================================================================================
+TROUBLESHOOTING PYTHONANYWHERE
+================================================================================
+
+Problem: "Application Error"
+Fix:
+  1. Check error log (Web tab → Error log)
+  2. Verify WSGI file is correct
+  3. Make sure Flask is installed
+  4. Check file paths in WSGI
+
+Problem: "ModuleNotFoundError: flask"
+Fix:
+  1. Open Bash console
+  2. Activate virtualenv: workon fx-sheet
+  3. Install Flask: pip install flask
+  4. Reload web app
+
+Problem: Dashboard loads but no data
+Fix:
+  1. Check stocks-data.json is uploaded
+  2. Verify file location
+  3. Check browser console (F12)
+  4. Try: yourusername.pythonanywhere.com/stocks-data.json
+
+Problem: Cannot fetch from Yahoo Finance
+Fix:
+  1. Yahoo Finance IS whitelisted
+  2. If blocked, check whitelist:
+     https://www.pythonanywhere.com/whitelist/
+  3. Use pre-fetched data instead
+
+Problem: Stock management API doesn't save
+Fix:
+  1. Check file permissions
+  2. Make sure flask_app.py has save endpoint
+  3. Check error log for details
+  4. Verify virtual environment is set
+
+---
+
+================================================================================
+PYTHONANYWHERE VS OTHER FREE HOSTS
+================================================================================
+
+Feature          | PythonAny | Render | Railway | Cloud Run
+-----------------|-----------|--------|---------|----------
+Free Forever     | ✓         | ✓      | ✗       | ✓
+Python Support   | ✓✓✓       | ✓✓     | ✓✓      | ✓✓
+Easy Setup       | ✓✓✓       | ✓✓     | ✓✓      | ✗
+No Credit Card   | ✓         | ✓      | ✗       | ✗
+Yahoo Finance    | ✓         | ✓      | ✓       | ✓
+Always On        | ✓         | ✗      | ✗       | ✗
+Custom Domain    | ✗         | ✓      | ✓       | ✓
+Database         | ✓ (MySQL) | ✓ (PG) | ✓       | ✗
+Best For         | Beginners | Apps   | Pros    | Enterprise
+
+**Winner for FX Sheet: PythonAnywhere** 🏆
+
+---
+
+================================================================================
+DEPLOYMENT CHECKLIST
+================================================================================
+
+☐ PythonAnywhere account created
+☐ Files uploaded (index.html, stocks-data.json, flask_app.py, requirements.txt)
+☐ Web app created (Manual configuration)
+☐ WSGI file configured
+☐ Virtual environment created
+☐ Flask installed
+☐ Static files mapped
+☐ Web app reloaded
+☐ Dashboard loads successfully
+☐ Stock data displays
+☐ Filters and sorting work
+☐ Yahoo Finance links work
+☐ (Optional) Stock management API works
+
+---
+
+================================================================================
+COST BREAKDOWN
+================================================================================
+
+PythonAnywhere Free: $0/month
+- 1 web app
+- 100 CPU-sec/day
+- 512 MB storage
+- Yahoo Finance access
+- Custom subdomain
+
+Optional Upgrades:
+- Hacker Plan: $5/month
+  - Custom domains
+  - More CPU
+  - Scheduled tasks
+  - More web apps
+
+Total for FREE: $0/month 🎉
+
+---
+
+================================================================================
+ALTERNATIVE: Deploy Your Own Server (Advanced)
+================================================================================
+
+If you want full control:
+
+1. Oracle Cloud Free Tier
+   - Always-free VM (4 ARM cores, 24GB RAM!)
+   - Full Python support
+   - https://www.oracle.com/cloud/free/
+
+2. Google Cloud Free Tier
+   - e2-micro instance free
+   - Full control
+   - https://cloud.google.com/free
+
+3. AWS Free Tier
+   - t2.micro for 12 months
+   - Full control
+   - https://aws.amazon.com/free
+
+These require more setup but give you complete control!
+
+---
+
+================================================================================
+QUICK START - PYTHONANYWHERE (5 MINUTES)
+================================================================================
+
+1. Sign up: https://www.pythonanywhere.com
+2. Upload 4 files to Files tab
+3. Create web app (Manual, Python 3.10)
+4. Configure WSGI (copy code from above)
+5. Create virtualenv: mkvirtualenv fx-sheet
+6. Install Flask: pip install flask
+7. Reload web app
+8. Visit: yourusername.pythonanywhere.com
+9. DONE! 🎉
+
+---
+
+================================================================================
+YOUR NEXT STEPS
+================================================================================
+
+1. Create PythonAnywhere account (FREE)
+2. Follow the step-by-step guide above
+3. Upload your FX Sheet files
+4. Configure Flask app
+5. Go live!
+
+**I recommend PythonAnywhere because:**
+- Easiest setup
+- Built for Python
+- Yahoo Finance works
+- Free forever
+- No credit card needed
+
+**Ready to deploy?** Let me know and I'll guide you through each step! 🚀
+
+---
+
+================================================================================
+FILES YOU'LL NEED TO UPLOAD
+================================================================================
+
+From your FX Sheet folder:
+✓ index.html
+✓ stocks-data.json
+✓ flask_app.py
+✓ requirements.txt
+
+All files are ready in:
+c:\Users\mahmo\Desktop\FX Sheet\
+
+---
+
+================================================================================
+SUPPORT RESOURCES
+================================================================================
+
+PythonAnywhere Help:
+- Docs: https://help.pythonanywhere.com/
+- Forum: https://www.pythonanywhere.com/forums/
+- Whitelist: https://www.pythonanywhere.com/whitelist/
+
+Flask Deployment:
+- Flask docs: https://flask.palletsprojects.com/
+- PythonAnywhere Flask: https://help.pythonanywhere.com/pages/Flask/
+
+Dashboard Support:
+- Check DEPLOYMENT_GUIDE.md
+- Check DEPLOY_AWARDSPACE.txt
+- Review error logs
+
+---
+
+================================================================================
+YOU'RE READY!
+================================================================================
+
+Free Python hosting options ranked:
+
+🥇 PythonAnywhere - Best for you (easy, free, Python-focused)
+🥈 Render - Good alternative (more powerful, sleeps)
+🥉 Railway - Trial only (then paid)
+4. Google Cloud Run - Enterprise (needs credit card)
+5. Vercel - Serverless only (not full Flask)
+
+**Recommended: PythonAnywhere**
+
+Sign up: https://www.pythonanywhere.com
+
+Your FX Sheet Dashboard will work perfectly! 📈
+
+================================================================================

@@ -1,0 +1,268 @@
+================================================================================
+     AUTOMATED FREQUENT STOCK UPDATES - SETUP GUIDE
+================================================================================
+
+You have 3 options for updating stock prices more frequently than daily:
+
+================================================================================
+OPTION 1: PythonAnywhere Paid Plan ($5/month) - RECOMMENDED
+================================================================================
+
+COST: $5/month
+UPDATE FREQUENCY: Every hour (24 updates/day)
+SETUP TIME: 5 minutes
+
+Steps:
+1. Upgrade to Hacker plan at pythonanywhere.com
+2. Go to "Tasks" tab
+3. Add scheduled tasks for each hour you want:
+   
+   00:00 - cd /home/yourusername/fx-sheet && python3.10 fetch_yahoo_data.py
+   01:00 - cd /home/yourusername/fx-sheet && python3.10 fetch_yahoo_data.py
+   02:00 - cd /home/yourusername/fx-sheet && python3.10 fetch_yahoo_data.py
+   ... (add for all 24 hours)
+
+4. Done! Automatic hourly updates
+
+Pros:
+✓ Simplest setup
+✓ Most reliable
+✓ Direct integration with PythonAnywhere
+✓ More CPU power
+
+Cons:
+✗ Costs $5/month
+
+================================================================================
+OPTION 2: GitHub Actions (FREE) - ALTERNATIVE
+================================================================================
+
+COST: FREE
+UPDATE FREQUENCY: Every 2 hours (12 updates/day)
+SETUP TIME: 20 minutes
+
+I've created the GitHub Actions workflow file for you!
+
+Setup Steps:
+
+STEP 1: Create GitHub Repository
+----------------------------------
+1. Go to https://github.com/new
+2. Create a new repository: "fx-sheet"
+3. Make it Public or Private (your choice)
+4. Don't initialize with README
+
+STEP 2: Push Your Files to GitHub
+-----------------------------------
+Open PowerShell in your FX Sheet folder and run:
+
+cd "C:\Users\mahmo\Desktop\FX Sheet"
+git init
+git add .
+git commit -m "Initial commit - FX Sheet Dashboard"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/fx-sheet.git
+git push -u origin main
+
+Replace YOUR_USERNAME with your GitHub username.
+
+STEP 3: GitHub Actions is Already Configured
+---------------------------------------------
+The file .github/workflows/update-stocks.yml is already created!
+It will automatically:
+- Run every 2 hours
+- Fetch fresh stock data from Yahoo Finance
+- Commit and push the updated stocks-data.json
+
+STEP 4: Connect GitHub to PythonAnywhere
+------------------------------------------
+Now set up PythonAnywhere to pull from GitHub:
+
+1. On PythonAnywhere, open Bash console
+2. Run:
+
+   cd /home/yourusername/fx-sheet
+   git init
+   git remote add origin https://github.com/YOUR_USERNAME/fx-sheet.git
+   git pull origin main
+
+3. Create a pull script. Create file: pull-updates.sh
+
+#!/bin/bash
+cd /home/yourusername/fx-sheet
+git pull origin main
+
+4. Make it executable:
+   chmod +x pull-updates.sh
+
+STEP 5: Set Up Auto-Pull on PythonAnywhere
+-------------------------------------------
+Add a scheduled task on PythonAnywhere (free tier allows 1 daily):
+
+Time: 23:59
+Command: cd /home/yourusername/fx-sheet && ./pull-updates.sh
+
+This pulls the latest data from GitHub once daily.
+
+BETTER APPROACH - Use Static Hosting with GitHub Pages:
+--------------------------------------------------------
+Since GitHub Actions updates the JSON file, you can host the dashboard 
+directly on GitHub Pages (FREE):
+
+1. Go to your repository Settings
+2. Click "Pages" in left sidebar
+3. Source: Deploy from branch
+4. Branch: main, folder: / (root)
+5. Your dashboard will be at:
+   https://YOUR_USERNAME.github.io/fx-sheet/
+
+This way:
+✓ GitHub Actions updates data every 2 hours
+✓ GitHub Pages serves the dashboard
+✓ 100% FREE
+✓ No PythonAnywhere needed!
+
+STEP 6: Customize Update Frequency
+------------------------------------
+Edit .github/workflows/update-stocks.yml:
+
+Every hour:        '0 * * * *'
+Every 2 hours:     '0 */2 * * *'  (current)
+Every 3 hours:     '0 */3 * * *'
+Every 4 hours:     '0 */4 * * *'
+Every 6 hours:     '0 */6 * * *'
+Twice daily:       '0 6,18 * * *'
+
+STEP 7: Manual Trigger
+-----------------------
+You can also trigger updates manually:
+1. Go to your GitHub repository
+2. Click "Actions" tab
+3. Click "Update FX Sheet Stock Data"
+4. Click "Run workflow" button
+
+Pros:
+✓ Completely FREE
+✓ Updates every 2 hours
+✓ Can host on GitHub Pages
+✓ Version control for all changes
+
+Cons:
+✗ More complex setup
+✗ GitHub Actions has usage limits (but generous)
+✗ Requires Git knowledge
+
+================================================================================
+OPTION 3: External Cron Service + PythonAnywhere (FREE)
+================================================================================
+
+COST: FREE
+UPDATE FREQUENCY: Every hour
+SETUP TIME: 15 minutes
+
+Use a free cron service to trigger updates on PythonAnywhere:
+
+STEP 1: Sign Up for Free Cron Service
+---------------------------------------
+Options:
+- cron-job.org (FREE, up to every minute)
+- EasyCron.com (FREE, up to every hour)
+- SetCronJob.com (FREE)
+
+STEP 2: Create API Endpoint on PythonAnywhere
+-----------------------------------------------
+Create a new file: update_api.py
+
+from flask import Flask, jsonify
+import subprocess
+import os
+
+app = Flask(__name__)
+
+@app.route('/update-stocks')
+def update_stocks():
+    try:
+        # Run the update script
+        result = subprocess.run(
+            ['python3.10', 'fetch_yahoo_data.py'],
+            cwd='/home/yourusername/fx-sheet',
+            capture_output=True,
+            text=True,
+            timeout=600  # 10 minutes timeout
+        )
+        
+        return jsonify({
+            'status': 'success',
+            'message': 'Stock data updated',
+            'output': result.stdout
+        })
+    except Exception as e:
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
+        }), 500
+
+if __name__ == '__main__':
+    app.run()
+
+STEP 3: Add to WSGI Configuration
+-----------------------------------
+Add this route to your existing flask_app.py or create separate endpoint
+
+STEP 4: Set Up Cron Job
+-------------------------
+1. Go to cron-job.org
+2. Create new cron job
+3. URL: https://yourusername.pythonanywhere.com/update-stocks
+4. Schedule: Every hour
+5. Done!
+
+⚠️ WARNING: This approach may violate PythonAnywhere's Terms of Service
+for free accounts. Use at your own risk.
+
+Pros:
+✓ FREE
+✓ Hourly updates possible
+
+Cons:
+✗ May violate ToS
+✗ Complex setup
+✗ Less reliable
+
+================================================================================
+RECOMMENDATION
+================================================================================
+
+For your needs, I recommend:
+
+BEST OPTION: GitHub Actions + GitHub Pages (100% FREE)
+-------------------------------------------------------
+✓ Updates every 2 hours automatically
+✓ Hosting is FREE
+✓ No monthly costs
+✓ Reliable and professional
+✓ Easy to monitor (GitHub shows update history)
+
+Setup workflow:
+1. Push code to GitHub (I can help you)
+2. GitHub Actions runs every 2 hours
+3. Updates stocks-data.json automatically
+4. GitHub Pages serves the dashboard
+5. Your URL: https://YOUR_USERNAME.github.io/fx-sheet/
+
+ALTERNATIVE: PythonAnywhere Paid ($5/month)
+---------------------------------------------
+If you prefer to stay on PythonAnywhere and don't mind paying $5/month,
+this is the simplest solution with hourly updates.
+
+================================================================================
+WHAT WOULD YOU LIKE TO DO?
+================================================================================
+
+Option A: Set up GitHub Actions + GitHub Pages (FREE, every 2 hours)
+Option B: Upgrade PythonAnywhere to $5/month (every hour)
+Option C: Keep current setup with manual daily updates
+
+Let me know which option you prefer, and I'll help you set it up!
+
+================================================================================
