@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FX Sheet - Update Stock Data</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        .subtitle {
+            color: #718096;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .btn-update {
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-update:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
+        }
+
+        .btn-update:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .btn-update.updating {
+            background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .status {
+            margin-top: 20px;
+            padding: 16px;
+            border-radius: 8px;
+            display: none;
+            line-height: 1.6;
+        }
+
+        .status.active {
+            display: block;
+            background-color: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #92400e;
+        }
+
+        .status.success {
+            display: block;
+            background-color: #c6f6d5;
+            border: 1px solid #48bb78;
+            color: #22543d;
+        }
+
+        .status.error {
+            display: block;
+            background-color: #fed7d7;
+            border: 1px solid #f56565;
+            color: #742a2a;
+        }
+
+        .info-box {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f7fafc;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-box h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .info-box p {
+            color: #4a5568;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .info-box code {
+            background-color: #e2e8f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .link-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 FX Sheet Data Updater</h1>
+        <p class="subtitle">Update stock data on-demand with one click</p>
+
+        <button class="btn-update" id="updateBtn" onclick="triggerUpdate()">
+            <span id="btnIcon">🚀</span>
+            <span id="btnText">Update Stock Data</span>
+        </button>
+
+        <div class="status" id="status"></div>
+
+        <div class="info-box">
+            <h3>ℹ️ How It Works</h3>
+            <p>1. Click the button above to trigger a GitHub Actions workflow</p>
+            <p>2. The workflow fetches fresh data for 463 stocks from Yahoo Finance</p>
+            <p>3. Updated data is committed to your repository</p>
+            <p>4. Refresh your dashboard to see the new data</p>
+            
+            <a href="https://github.com/mahmoudghanim/fx-sheet/actions" target="_blank" class="link-button">
+                View Workflow Status →
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // GitHub Configuration
+        const CONFIG = {
+            owner: 'mahmoudghanim',
+            repo: 'FX-Sheet',
+            token: 'YOUR_TOKEN_HERE',  // Add your token here
+            branch: 'main'
+        };
+
+        async function triggerUpdate() {
+            const btn = document.getElementById('updateBtn');
+            const btnIcon = document.getElementById('btnIcon');
+            const btnText = document.getElementById('btnText');
+            const status = document.getElementById('status');
+
+            // Disable button
+            btn.disabled = true;
+            btn.classList.add('updating');
+            btnIcon.textContent = '⏳';
+            btnText.textContent = 'Updating...';
+            showStatus('active', '🔄 Triggering GitHub Actions workflow...');
+
+            try {
+                // Step 1: Trigger the workflow
+                showStatus('active', '🔄 Starting workflow run...');
+                await triggerWorkflow();
+
+                // Step 2: Wait for workflow to start
+                await sleep(3000);
+                showStatus('active', '⏳ Workflow is running... This may take 1-2 minutes.');
+
+                // Step 3: Monitor progress
+                const success = await monitorWorkflow();
+
+                if (success) {
+                    showStatus('success', '✅ Stock data updated successfully!<br><br><strong>Next:</strong> Refresh your dashboard to see the new data.');
+                } else {
+                    showStatus('error', '❌ Update failed. Please check the <a href="https://github.com/mahmoudghanim/fx-sheet/actions" target="_blank" style="color: #742a2a; text-decoration: underline;">GitHub Actions logs</a> for details.');
+                }
+            } catch (error) {
+                console.error('Update error:', error);
+                showStatus('error', `❌ Error: ${error.message}<br><br>Please check the <a href="https://github.com/mahmoudghanim/fx-sheet/actions" target="_blank" style="color: #742a2a; text-decoration: underline;">GitHub Actions logs</a>.`);
+            } finally {
+                // Reset button
+                btn.disabled = false;
+                btn.classList.remove('updating');
+                btnIcon.textContent = '🚀';
+                btnText.textContent = 'Update Stock Data';
+            }
+        }
+
+        async function triggerWorkflow() {
+            const url = `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/actions/workflows/update-stocks.yml/dispatches`;
+            
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `token ${CONFIG.token}`,
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ref: CONFIG.branch
+                })
+            });
+
+            if (!response.ok) {
+                const error = await response.json();
+                throw new Error(`Failed to trigger workflow: ${response.status} ${error.message}`);
+            }
+
+            return true;
+        }
+
+        async function monitorWorkflow() {
+            const maxAttempts = 40; // Wait up to ~3-4 minutes
+            const url = `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/actions/workflows/update-stocks.yml/runs?per_page=1&status=in_progress`;
+
+            for (let attempt = 0; attempt < maxAttempts; attempt++) {
+                await sleep(5000); // Check every 5 seconds
+
+                try {
+                    const response = await fetch(url, {
+                        headers: {
+                            'Authorization': `token ${CONFIG.token}`,
+                            'Accept': 'application/vnd.github.v3+json',
+                        }
+                    });
+
+                    if (!response.ok) continue;
+
+                    const data = await response.json();
+                    
+                    if (data.workflow_runs && data.workflow_runs.length > 0) {
+                        const run = data.workflow_runs[0];
+                        const elapsed = Math.floor((attempt + 1) * 5 / 60);
+                        showStatus('active', `⏳ Workflow running... (~${elapsed} min elapsed)<br><small>Status: ${run.status} | Step: ${run.current_step || 'processing'}</small>`);
+                    }
+
+                    // Check if completed
+                    const completedUrl = `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/actions/workflows/update-stocks.yml/runs?per_page=1`;
+                    const completedResponse = await fetch(completedUrl, {
+                        headers: {
+                            'Authorization': `token ${CONFIG.token}`,
+                            'Accept': 'application/vnd.github.v3+json',
+                        }
+                    });
+
+                    if (completedResponse.ok) {
+                        const completedData = await completedResponse.json();
+                        if (completedData.workflow_runs && completedData.workflow_runs.length > 0) {
+                            const latestRun = completedData.workflow_runs[0];
+                            if (latestRun.status === 'completed') {
+                                return latestRun.conclusion === 'success' || latestRun.conclusion === 'skipped';
+                            }
+                        }
+                    }
+                } catch (error) {
+                    console.error('Monitoring error:', error);
+                }
+            }
+
+            // Timeout - check final status
+            return false;
+        }
+
+        function showStatus(type, message) {
+            const status = document.getElementById('status');
+            status.className = `status ${type}`;
+            status.innerHTML = message;
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+    </script>
+</body>
+</html>

@@ -34,69 +34,6 @@
             text-align: center;
         }
 
-        .header-buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .btn-update {
-            padding: 8px 20px;
-            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-update:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4);
-        }
-
-        .btn-update:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .btn-update.updating {
-            background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-
-        .update-status {
-            margin-top: 10px;
-            padding: 8px 16px;
-            background-color: rgba(255, 255, 255, 0.15);
-            border-radius: 6px;
-            font-size: 0.85rem;
-            display: none;
-        }
-
-        .update-status.active {
-            display: block;
-        }
-
-        .update-status.success {
-            background-color: rgba(72, 187, 120, 0.3);
-        }
-
-        .update-status.error {
-            background-color: rgba(245, 101, 101, 0.3);
-        }
-
         header h1 {
             font-size: 1.4rem;
             margin-bottom: 5px;
@@ -633,14 +570,9 @@
         <header>
             <h1>🌍 Global Stocks Dashboard</h1>
             <p>Real-time tracking of international stock markets</p>
-            <div class="header-buttons">
-                <button class="btn-update" id="updateDataBtn" onclick="triggerDataUpdate()">
-                    <span id="updateBtnIcon">📊</span>
-                    <span id="updateBtnText">Update Data</span>
-                </button>
+            <div style="margin-top: 10px;">
                 <button class="btn btn-secondary" onclick="toggleManagement()" style="padding: 8px 16px; font-size: 0.9rem;">⚙️ Manage Stocks</button>
             </div>
-            <div class="update-status" id="updateStatus"></div>
         </header>
 
         <div class="stats-bar">
@@ -882,13 +814,6 @@
     </div>
 
     <script>
-        // GitHub Configuration - YOU NEED TO SET THIS!
-        const GITHUB_CONFIG = {
-            owner: 'mahmoudghanim',
-            repo: 'FX-Sheet',
-            token: 'YOUR_TOKEN_HERE'  // See GITHUB_TOKEN_SETUP.md for instructions
-        };
-
         // This will be populated with data from your Excel file
         let stocksData = [];
         let filteredData = [];
@@ -1664,170 +1589,6 @@
         function hideMessage(elementId) {
             const element = document.getElementById(elementId);
             element.style.display = 'none';
-        }
-
-        // ============================================
-        // GitHub Actions Update Functionality
-        // ============================================
-
-        function triggerDataUpdate() {
-            const btn = document.getElementById('updateDataBtn');
-            const btnIcon = document.getElementById('updateBtnIcon');
-            const btnText = document.getElementById('updateBtnText');
-            const status = document.getElementById('updateStatus');
-
-            // Check if token is configured
-            if (!GITHUB_CONFIG.token) {
-                showUpdateStatus('error', '⚠️ GitHub token not configured. Please see instructions below.');
-                showTokenInstructions();
-                return;
-            }
-
-            // Disable button and show loading state
-            btn.disabled = true;
-            btn.classList.add('updating');
-            btnIcon.textContent = '⏳';
-            btnText.textContent = 'Updating...';
-            showUpdateStatus('active', '🔄 Triggering data update on GitHub...');
-
-            // Trigger GitHub Actions workflow
-            triggerGitHubWorkflow()
-                .then(runId => {
-                    showUpdateStatus('active', `✅ Update triggered! Monitoring progress... (Run #${runId})`);
-                    // Poll for completion
-                    return pollWorkflowStatus(runId);
-                })
-                .then(status => {
-                    if (status === 'success') {
-                        showUpdateStatus('success', '✅ Stock data updated successfully! Refreshing dashboard...');
-                        // Reload data
-                        setTimeout(() => {
-                            loadStockData();
-                            resetUpdateButton();
-                        }, 2000);
-                    } else if (status === 'skipped') {
-                        showUpdateStatus('success', 'ℹ️ Data is already up to date. No changes needed.');
-                        resetUpdateButton();
-                    } else {
-                        showUpdateStatus('error', '❌ Update failed. Please check GitHub Actions for details.');
-                        resetUpdateButton();
-                    }
-                })
-                .catch(error => {
-                    console.error('Update error:', error);
-                    showUpdateStatus('error', `❌ Error: ${error.message}`);
-                    resetUpdateButton();
-                });
-        }
-
-        async function triggerGitHubWorkflow() {
-            const url = `https://api.github.com/repos/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/actions/workflows/update-stocks.yml/dispatches`;
-            
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Authorization': `token ${GITHUB_CONFIG.token}`,
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    ref: 'main'  // or 'master' depending on your branch
-                })
-            });
-
-            if (!response.ok) {
-                const error = await response.text();
-                throw new Error(`Failed to trigger workflow: ${response.status} ${error}`);
-            }
-
-            // Get the latest run ID
-            await new Promise(resolve => setTimeout(resolve, 3000)); // Wait 3 seconds for run to start
-            
-            const runsUrl = `https://api.github.com/repos/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/actions/workflows/update-stocks.yml/runs?per_page=1`;
-            const runsResponse = await fetch(runsUrl, {
-                headers: {
-                    'Authorization': `token ${GITHUB_CONFIG.token}`,
-                    'Accept': 'application/vnd.github.v3+json',
-                }
-            });
-
-            if (!runsResponse.ok) {
-                throw new Error('Failed to get workflow runs');
-            }
-
-            const runsData = await runsResponse.json();
-            if (!runsData.workflow_runs || runsData.workflow_runs.length === 0) {
-                throw new Error('No workflow runs found');
-            }
-
-            return runsData.workflow_runs[0].id;
-        }
-
-        async function pollWorkflowStatus(runId, maxAttempts = 60) {
-            const url = `https://api.github.com/repos/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/actions/runs/${runId}`;
-            
-            for (let attempt = 0; attempt < maxAttempts; attempt++) {
-                await new Promise(resolve => setTimeout(resolve, 5000)); // Wait 5 seconds between checks
-
-                const response = await fetch(url, {
-                    headers: {
-                        'Authorization': `token ${GITHUB_CONFIG.token}`,
-                        'Accept': 'application/vnd.github.v3+json',
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to get workflow status');
-                }
-
-                const data = await response.json();
-                const status = data.status;
-                const conclusion = data.conclusion;
-
-                showUpdateStatus('active', `⏳ Update in progress... (${Math.floor((attempt + 1) * 5 / 60)} min estimated)`);
-
-                if (status === 'completed') {
-                    if (conclusion === 'success') {
-                        return 'success';
-                    } else if (conclusion === 'skipped') {
-                        return 'skipped';
-                    } else {
-                        return 'failed';
-                    }
-                }
-            }
-
-            throw new Error('Update timed out (taking too long)');
-        }
-
-        function showUpdateStatus(type, message) {
-            const status = document.getElementById('updateStatus');
-            status.className = `update-status active ${type}`;
-            status.textContent = message;
-        }
-
-        function resetUpdateButton() {
-            const btn = document.getElementById('updateDataBtn');
-            const btnIcon = document.getElementById('updateBtnIcon');
-            const btnText = document.getElementById('updateBtnText');
-            
-            btn.disabled = false;
-            btn.classList.remove('updating');
-            btnIcon.textContent = '📊';
-            btnText.textContent = 'Update Data';
-        }
-
-        function showTokenInstructions() {
-            const status = document.getElementById('updateStatus');
-            status.innerHTML = `
-                <strong>⚙️ Setup Required (One-time):</strong><br>
-                1. Go to <a href="https://github.com/settings/tokens" target="_blank" style="color: #63b3ed;">GitHub Settings → Personal Access Tokens</a><br>
-                2. Click "Generate new token (classic)"<br>
-                3. Select scope: <code>repo</code> (Full control of private repositories)<br>
-                4. Copy the token<br>
-                5. Open <code>index.html</code> in a text editor and replace <code>YOUR_GITHUB_USERNAME</code> and paste your token in the <code>GITHUB_CONFIG</code> section at the top of the script
-            `;
-            status.className = 'update-status active error';
         }
     </script>
 </body>
