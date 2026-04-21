@@ -13,7 +13,8 @@
     "exchange": "NYSE",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.78
   },
   {
     "code": "ABN.nl",
@@ -29,7 +30,8 @@
     "exchange": "EURONEXT",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": 0.33
   },
   {
     "code": "ADS.de",
@@ -45,7 +47,8 @@
     "exchange": "XETR",
     "industry": "Footwear & Accessories",
     "sector": "Consumer Cyclical",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": 0.14
   },
   {
     "code": "ADBE.us",
@@ -61,7 +64,8 @@
     "exchange": "NASDAQ",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.36
   },
   {
     "code": "AMD.us",
@@ -77,7 +81,8 @@
     "exchange": "NASDAQ",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 2.18
   },
   {
     "code": "AMD.ext",
@@ -93,7 +98,8 @@
     "exchange": "- Extended",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 2.18
   },
   {
     "code": "6857.jp",
@@ -109,7 +115,8 @@
     "exchange": "Stock Exchange",
     "industry": "Semiconductor Equipment & Materials",
     "sector": "Technology",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 0.37
   },
   {
     "code": "AFRM.us",
@@ -125,7 +132,8 @@
     "exchange": "NASDAQ",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.6
   },
   {
     "code": "AFRM.ext",
@@ -141,7 +149,8 @@
     "exchange": "- Extended",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.6
   },
   {
     "code": "AEM.ca",
@@ -157,7 +166,8 @@
     "exchange": "Stock Exchange",
     "industry": "Gold",
     "sector": "Basic Materials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -3.79
   },
   {
     "code": "ABC.hk",
@@ -170,7 +180,8 @@
     "changeAmount": -1.84,
     "change52W": 78.67,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -8.39
   },
   {
     "code": "AIA.hk",
@@ -183,7 +194,8 @@
     "changeAmount": 9.89,
     "change52W": 60.98,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 2.63
   },
   {
     "code": "AI.fr",
@@ -199,7 +211,8 @@
     "exchange": "- Paris",
     "industry": "Specialty Chemicals",
     "sector": "Basic Materials",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": 0.03
   },
   {
     "code": "ABNB.us",
@@ -215,7 +228,8 @@
     "exchange": "NASDAQ",
     "industry": "Travel Services",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.28
   },
   {
     "code": "ABNB.ext",
@@ -231,7 +245,8 @@
     "exchange": "- Extended",
     "industry": "Travel Services",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.28
   },
   {
     "code": "AIR.fr",
@@ -247,7 +262,8 @@
     "exchange": "- Paris",
     "industry": "Aerospace & Defense",
     "sector": "Industrials",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -1.54
   },
   {
     "code": "AKES.hk",
@@ -260,7 +276,8 @@
     "changeAmount": -7.7,
     "change52W": 4.49,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -2.11
   },
   {
     "code": "AQN.ca",
@@ -276,7 +293,8 @@
     "exchange": "Stock Exchange",
     "industry": "Utilities - Diversified",
     "sector": "Utilities",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.7
   },
   {
     "code": "BABA.hk",
@@ -289,7 +307,8 @@
     "changeAmount": 7.75,
     "change52W": 16.88,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 1.78
   },
   {
     "code": "BABA.us",
@@ -305,7 +324,8 @@
     "exchange": "NYSE",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.96
   },
   {
     "code": "BABA.ext",
@@ -321,7 +341,8 @@
     "exchange": "- Extended",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.96
   },
   {
     "code": "ALIH.hk",
@@ -334,7 +355,8 @@
     "changeAmount": -3.61,
     "change52W": -9.48,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -0.9
   },
   {
     "code": "ATD.ca",
@@ -350,7 +372,8 @@
     "exchange": "Stock Exchange",
     "industry": "Specialty Retail",
     "sector": "Consumer Cyclical",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.58
   },
   {
     "code": "ALV.de",
@@ -366,7 +389,8 @@
     "exchange": "XETR",
     "industry": "Insurance - Diversified",
     "sector": "Financial Services",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": 1.41
   },
   {
     "code": "GOOG.us",
@@ -382,7 +406,8 @@
     "exchange": "NASDAQ",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.18
   },
   {
     "code": "GOOG.ext",
@@ -398,7 +423,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.18
   },
   {
     "code": "ALO.fr",
@@ -414,7 +440,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Railroads",
     "sector": "Industrials",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.18
   },
   {
     "code": "ALUM.hk",
@@ -427,7 +454,8 @@
     "changeAmount": -7.36,
     "change52W": 49.25,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -3.82
   },
   {
     "code": "AMZN.us",
@@ -443,7 +471,8 @@
     "exchange": "NASDAQ",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.51
   },
   {
     "code": "AMZN.ext",
@@ -459,7 +488,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.51
   },
   {
     "code": "ABEV.us",
@@ -475,7 +505,8 @@
     "exchange": "NYSE",
     "industry": "Beverages - Brewers",
     "sector": "Consumer Defensive",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.65
   },
   {
     "code": "AAL.us",
@@ -491,7 +522,8 @@
     "exchange": "NASDAQ",
     "industry": "Airlines",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.35
   },
   {
     "code": "AMGN.us",
@@ -507,7 +539,8 @@
     "exchange": "NASDAQ",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.4
   },
   {
     "code": "ANTA.hk",
@@ -520,7 +553,8 @@
     "changeAmount": 1.43,
     "change52W": 35.42,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 0.37
   },
   {
     "code": "AAPL.us",
@@ -536,7 +570,8 @@
     "exchange": "NASDAQ",
     "industry": "Consumer Electronics",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.24
   },
   {
     "code": "AAPL.ext",
@@ -552,7 +587,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Consumer Electronics",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.24
   },
   {
     "code": "AMAT.us",
@@ -568,7 +604,8 @@
     "exchange": "NASDAQ",
     "industry": "Semiconductor Equipment & Materials",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.65
   },
   {
     "code": "ASML.nl",
@@ -584,7 +621,8 @@
     "exchange": "EURONEXT",
     "industry": "Semiconductor Equipment & Materials",
     "sector": "Technology",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.64
   },
   {
     "code": "4503.jp",
@@ -600,7 +638,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.75
   },
   {
     "code": "AZN.uk",
@@ -616,7 +655,8 @@
     "exchange": "LSE",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.77
   },
   {
     "code": "AZN.us",
@@ -632,7 +672,8 @@
     "exchange": "NASDAQ",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.77
   },
   {
     "code": "T.us",
@@ -648,7 +689,8 @@
     "exchange": "NYSE",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": null
   },
   {
     "code": "T.ext",
@@ -664,7 +706,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": null
   },
   {
     "code": "AUR.us",
@@ -680,7 +723,8 @@
     "exchange": "NASDAQ",
     "industry": "Information Technology Services",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.57
   },
   {
     "code": "AUTO.uk",
@@ -693,7 +737,8 @@
     "changeAmount": 8.89,
     "change52W": -4.91,
     "product": "Share",
-    "exchange": "LSE"
+    "exchange": "LSE",
+    "dailyChangePct": 8.36
   },
   {
     "code": "AV.uk",
@@ -706,7 +751,8 @@
     "changeAmount": 0.16,
     "change52W": 19.36,
     "product": "Share",
-    "exchange": "LSE"
+    "exchange": "LSE",
+    "dailyChangePct": 0.05
   },
   {
     "code": "BA.uk",
@@ -722,7 +768,8 @@
     "exchange": "LSE",
     "industry": "Aerospace & Defense",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.67
   },
   {
     "code": "BIDU.hk",
@@ -735,7 +782,8 @@
     "changeAmount": -0.46,
     "change52W": -15.37,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -0.16
   },
   {
     "code": "BIDU.us",
@@ -751,7 +799,8 @@
     "exchange": "NASDAQ",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.01
   },
   {
     "code": "BIDU.ext",
@@ -767,7 +816,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.01
   },
   {
     "code": "BBD.us",
@@ -783,7 +833,8 @@
     "exchange": "NYSE",
     "industry": "Banks - Regional",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.39
   },
   {
     "code": "BBD.ext",
@@ -799,7 +850,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Banks - Regional",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.39
   },
   {
     "code": "7832.jp",
@@ -815,7 +867,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Leisure",
     "sector": "Consumer Cyclical",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -0.46
   },
   {
     "code": "BAC.us",
@@ -831,7 +884,8 @@
     "exchange": "NYSE",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.15
   },
   {
     "code": "BAC.ext",
@@ -847,7 +901,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.15
   },
   {
     "code": "BMO.ca",
@@ -863,7 +918,8 @@
     "exchange": "Stock Exchange",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.52
   },
   {
     "code": "BARC.uk",
@@ -876,7 +932,8 @@
     "changeAmount": -4.46,
     "change52W": 16.89,
     "product": "Share",
-    "exchange": "LSE"
+    "exchange": "LSE",
+    "dailyChangePct": -3.71
   },
   {
     "code": "ABX.ca",
@@ -892,7 +949,8 @@
     "exchange": "Stock Exchange",
     "industry": "Gold",
     "sector": "Basic Materials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -3.73
   },
   {
     "code": "BAS.de",
@@ -908,7 +966,8 @@
     "exchange": "XETR",
     "industry": "Chemicals",
     "sector": "Basic Materials",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": 1.12
   },
   {
     "code": "BAYN.de",
@@ -924,7 +983,8 @@
     "exchange": "XETR",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -3.36
   },
   {
     "code": "BCE.ca",
@@ -940,7 +1000,8 @@
     "exchange": "Stock Exchange",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.31
   },
   {
     "code": "BESI.nl",
@@ -956,7 +1017,8 @@
     "exchange": "EURONEXT",
     "industry": "Semiconductor Equipment & Materials",
     "sector": "Technology",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": 0.4
   },
   {
     "code": "BRKB.us",
@@ -969,7 +1031,8 @@
     "changeAmount": -3.07,
     "change52W": 71.56,
     "product": "Share",
-    "exchange": "NYSE"
+    "exchange": "NYSE",
+    "dailyChangePct": -2.89
   },
   {
     "code": "BILI.us",
@@ -985,7 +1048,8 @@
     "exchange": "NASDAQ",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -5.69
   },
   {
     "code": "BILI.hk",
@@ -998,7 +1062,8 @@
     "changeAmount": -7.67,
     "change52W": 78.92,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -16.79
   },
   {
     "code": "BILI.ext",
@@ -1014,7 +1079,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -5.69
   },
   {
     "code": "BITF.us",
@@ -1030,7 +1096,8 @@
     "exchange": "NASDAQ",
     "industry": "Capital Markets",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": null
   },
   {
     "code": "BB.us",
@@ -1046,7 +1113,8 @@
     "exchange": "NYSE",
     "industry": "Software - Infrastructure",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.64
   },
   {
     "code": "SQ.us",
@@ -1059,7 +1127,8 @@
     "changeAmount": 2.94,
     "change52W": 26.29,
     "product": "Share",
-    "exchange": "NYSE"
+    "exchange": "NYSE",
+    "dailyChangePct": 3.11
   },
   {
     "code": "SQ.ext",
@@ -1072,7 +1141,8 @@
     "changeAmount": -5.29,
     "change52W": 19.35,
     "product": "Share",
-    "exchange": "NYSE - Extended"
+    "exchange": "NYSE - Extended",
+    "dailyChangePct": -9.29
   },
   {
     "code": "BMW.de",
@@ -1088,7 +1158,8 @@
     "exchange": "XETR",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.02
   },
   {
     "code": "BNP.fr",
@@ -1104,7 +1175,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Banks - Regional",
     "sector": "Financial Services",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.5
   },
   {
     "code": "BA.us",
@@ -1120,7 +1192,8 @@
     "exchange": "NYSE",
     "industry": "Aerospace & Defense",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.67
   },
   {
     "code": "BA.ext",
@@ -1136,7 +1209,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Aerospace & Defense",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.67
   },
   {
     "code": "BKNG.us",
@@ -1152,7 +1226,8 @@
     "exchange": "NASDAQ",
     "industry": "Travel Services",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.18
   },
   {
     "code": "BP.uk",
@@ -1168,7 +1243,8 @@
     "exchange": "LSE",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.42
   },
   {
     "code": "BP.us",
@@ -1184,7 +1260,8 @@
     "exchange": "NYSE",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.42
   },
   {
     "code": "BMY.us",
@@ -1200,7 +1277,8 @@
     "exchange": "NYSE",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.17
   },
   {
     "code": "BMY.ext",
@@ -1216,7 +1294,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.17
   },
   {
     "code": "BATS.uk",
@@ -1229,7 +1308,8 @@
     "changeAmount": -5.18,
     "change52W": -16.7,
     "product": "Share",
-    "exchange": "LSE"
+    "exchange": "LSE",
+    "dailyChangePct": -1.46
   },
   {
     "code": "AVGO.us",
@@ -1245,7 +1325,8 @@
     "exchange": "NASDAQ",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.41
   },
   {
     "code": "BAM.ca",
@@ -1261,7 +1342,8 @@
     "exchange": "Stock Exchange",
     "industry": "Asset Management",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -1.03
   },
   {
     "code": "BN.ca",
@@ -1277,7 +1359,8 @@
     "exchange": "Stock Exchange",
     "industry": "Asset Management",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.38
   },
   {
     "code": "BIPU.ca",
@@ -1290,7 +1373,8 @@
     "changeAmount": 6.24,
     "change52W": 18.6,
     "product": "Share",
-    "exchange": "Stock Exchange"
+    "exchange": "Stock Exchange",
+    "dailyChangePct": 1.44
   },
   {
     "code": "BYDC.hk",
@@ -1303,7 +1387,8 @@
     "changeAmount": -3.05,
     "change52W": 6.82,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -0.87
   },
   {
     "code": "BYDE.hk",
@@ -1316,7 +1401,8 @@
     "changeAmount": 8.74,
     "change52W": 10.87,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 4.72
   },
   {
     "code": "CAE.ca",
@@ -1332,7 +1418,8 @@
     "exchange": "Stock Exchange",
     "industry": "Aerospace & Defense",
     "sector": "Industrials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -1.81
   },
   {
     "code": "CZR.us",
@@ -1348,7 +1435,8 @@
     "exchange": "NASDAQ",
     "industry": "Resorts & Casinos",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.27
   },
   {
     "code": "CCJ.us",
@@ -1364,7 +1452,8 @@
     "exchange": "NYSE",
     "industry": "Uranium",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.87
   },
   {
     "code": "CCO.ca",
@@ -1380,7 +1469,8 @@
     "exchange": "Stock Exchange",
     "industry": "Uranium",
     "sector": "Energy",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -3.82
   },
   {
     "code": "CARU.ca",
@@ -1393,7 +1483,8 @@
     "changeAmount": -4.03,
     "change52W": -20.92,
     "product": "Share",
-    "exchange": "Stock Exchange"
+    "exchange": "Stock Exchange",
+    "dailyChangePct": -0.81
   },
   {
     "code": "CM.ca",
@@ -1409,7 +1500,8 @@
     "exchange": "Stock Exchange",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.67
   },
   {
     "code": "CNR.ca",
@@ -1425,7 +1517,8 @@
     "exchange": "Stock Exchange",
     "industry": "Railroads",
     "sector": "Industrials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.82
   },
   {
     "code": "CNQ.ca",
@@ -1441,7 +1534,8 @@
     "exchange": "Stock Exchange",
     "industry": "Oil & Gas E&P",
     "sector": "Energy",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 1.3
   },
   {
     "code": "CP.ca",
@@ -1457,7 +1551,8 @@
     "exchange": "Stock Exchange",
     "industry": "Railroads",
     "sector": "Industrials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.29
   },
   {
     "code": "CTCA.ca",
@@ -1470,7 +1565,8 @@
     "changeAmount": 9.33,
     "change52W": 47.12,
     "product": "Share",
-    "exchange": "Stock Exchange"
+    "exchange": "Stock Exchange",
+    "dailyChangePct": 4.49
   },
   {
     "code": "COF.us",
@@ -1486,7 +1582,8 @@
     "exchange": "NYSE",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.95
   },
   {
     "code": "CCL.us",
@@ -1502,7 +1599,8 @@
     "exchange": "NYSE",
     "industry": "Travel Services",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.89
   },
   {
     "code": "CCL.ext",
@@ -1518,7 +1616,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Travel Services",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.89
   },
   {
     "code": "CA.fr",
@@ -1534,7 +1633,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Grocery Stores",
     "sector": "Consumer Defensive",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.54
   },
   {
     "code": "CAT.us",
@@ -1550,7 +1650,8 @@
     "exchange": "NYSE",
     "industry": "Farm & Heavy Construction Machinery",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.43
   },
   {
     "code": "CCLB.ca",
@@ -1563,7 +1664,8 @@
     "changeAmount": -2.94,
     "change52W": 61.6,
     "product": "Share",
-    "exchange": "Stock Exchange"
+    "exchange": "Stock Exchange",
+    "dailyChangePct": -0.61
   },
   {
     "code": "CVE.ca",
@@ -1579,7 +1681,8 @@
     "exchange": "Stock Exchange",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 2.35
   },
   {
     "code": "GIBA.ca",
@@ -1592,7 +1695,8 @@
     "changeAmount": 8.31,
     "change52W": 27.46,
     "product": "Share",
-    "exchange": "Stock Exchange"
+    "exchange": "Stock Exchange",
+    "dailyChangePct": 1.88
   },
   {
     "code": "CVX.us",
@@ -1608,7 +1712,8 @@
     "exchange": "NYSE",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.74
   },
   {
     "code": "CVX.ext",
@@ -1624,7 +1729,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.74
   },
   {
     "code": "CHWY.us",
@@ -1640,7 +1746,8 @@
     "exchange": "NYSE",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.15
   },
   {
     "code": "CDCR.hk",
@@ -1653,7 +1760,8 @@
     "changeAmount": -2.64,
     "change52W": -2.9,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -0.53
   },
   {
     "code": "LONG.hk",
@@ -1666,7 +1774,8 @@
     "changeAmount": -2.01,
     "change52W": -29.48,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -0.62
   },
   {
     "code": "CMB.hk",
@@ -1679,7 +1788,8 @@
     "changeAmount": -8.5,
     "change52W": -21.55,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -6.64
   },
   {
     "code": "CRL.hk",
@@ -1692,7 +1802,8 @@
     "changeAmount": 3.71,
     "change52W": 62.39,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 1.2
   },
   {
     "code": "TOWE.hk",
@@ -1705,7 +1816,8 @@
     "changeAmount": 1.81,
     "change52W": 18.53,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 0.37
   },
   {
     "code": "VNKE.hk",
@@ -1718,7 +1830,8 @@
     "changeAmount": 3.61,
     "change52W": 6.24,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 0.88
   },
   {
     "code": "CSCO.us",
@@ -1734,7 +1847,8 @@
     "exchange": "NASDAQ",
     "industry": "Communication Equipment",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.4
   },
   {
     "code": "CSCO.ext",
@@ -1750,7 +1864,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Communication Equipment",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.4
   },
   {
     "code": "CISE.hk",
@@ -1763,7 +1878,8 @@
     "changeAmount": 6.13,
     "change52W": 49.87,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 7.2
   },
   {
     "code": "C.us",
@@ -1779,7 +1895,8 @@
     "exchange": "NYSE",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.26
   },
   {
     "code": "C.ext",
@@ -1795,7 +1912,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.26
   },
   {
     "code": "CLSK.us",
@@ -1811,7 +1929,8 @@
     "exchange": "NASDAQ",
     "industry": "Capital Markets",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.9
   },
   {
     "code": "CLF.us",
@@ -1827,7 +1946,8 @@
     "exchange": "NYSE",
     "industry": "Steel",
     "sector": "Basic Materials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.52
   },
   {
     "code": "NET.us",
@@ -1843,7 +1963,8 @@
     "exchange": "NYSE",
     "industry": "Software - Infrastructure",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.97
   },
   {
     "code": "NET.ext",
@@ -1859,7 +1980,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Software - Infrastructure",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.97
   },
   {
     "code": "KO.us",
@@ -1875,7 +1997,8 @@
     "exchange": "NYSE",
     "industry": "Beverages - Non-Alcoholic",
     "sector": "Consumer Defensive",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.73
   },
   {
     "code": "KO.ext",
@@ -1891,7 +2014,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Beverages - Non-Alcoholic",
     "sector": "Consumer Defensive",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.73
   },
   {
     "code": "COIN.us",
@@ -1907,7 +2031,8 @@
     "exchange": "NASDAQ",
     "industry": "Financial Data & Stock Exchanges",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.79
   },
   {
     "code": "COIN.ext",
@@ -1923,7 +2048,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Financial Data & Stock Exchanges",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.79
   },
   {
     "code": "CMCSA.us",
@@ -1939,7 +2065,8 @@
     "exchange": "NASDAQ",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.1
   },
   {
     "code": "CBK.de",
@@ -1955,7 +2082,8 @@
     "exchange": "XETR",
     "industry": "Banks - Regional",
     "sector": "Financial Services",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -1.48
   },
   {
     "code": "CSU.ca",
@@ -1971,7 +2099,8 @@
     "exchange": "Stock Exchange",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -2.39
   },
   {
     "code": "CSCO.hk",
@@ -1984,7 +2113,8 @@
     "changeAmount": -8.62,
     "change52W": 52.18,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -3.25
   },
   {
     "code": "COST.us",
@@ -2000,7 +2130,8 @@
     "exchange": "NASDAQ",
     "industry": "Discount Stores",
     "sector": "Consumer Defensive",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.21
   },
   {
     "code": "COST.ext",
@@ -2016,7 +2147,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Discount Stores",
     "sector": "Consumer Defensive",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.21
   },
   {
     "code": "CPNG.us",
@@ -2032,7 +2164,8 @@
     "exchange": "NYSE",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.77
   },
   {
     "code": "CPNG.ext",
@@ -2048,7 +2181,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.77
   },
   {
     "code": "ACA.fr",
@@ -2064,7 +2198,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Banks - Regional",
     "sector": "Financial Services",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.85
   },
   {
     "code": "CRWD.us",
@@ -2080,7 +2215,8 @@
     "exchange": "NASDAQ",
     "industry": "Software - Infrastructure",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 4.87
   },
   {
     "code": "CRWD.ext",
@@ -2096,7 +2232,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Software - Infrastructure",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 4.87
   },
   {
     "code": "4568.jp",
@@ -2112,7 +2249,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -2.83
   },
   {
     "code": "6367.jp",
@@ -2128,7 +2266,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Building Products & Equipment",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -2.74
   },
   {
     "code": "DELL.us",
@@ -2144,7 +2283,8 @@
     "exchange": "NYSE",
     "industry": "Computer Hardware",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 3.33
   },
   {
     "code": "DAL.us",
@@ -2160,7 +2300,8 @@
     "exchange": "NYSE",
     "industry": "Airlines",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.81
   },
   {
     "code": "DNN.us",
@@ -2176,7 +2317,8 @@
     "exchange": "NYSE",
     "industry": "Uranium",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.28
   },
   {
     "code": "DBK.de",
@@ -2192,7 +2334,8 @@
     "exchange": "XETR",
     "industry": "Banks - Regional",
     "sector": "Financial Services",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.78
   },
   {
     "code": "DB1.de",
@@ -2208,7 +2351,8 @@
     "exchange": "XETR",
     "industry": "Financial Data & Stock Exchanges",
     "sector": "Financial Services",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": 0.53
   },
   {
     "code": "LHA.de",
@@ -2224,7 +2368,8 @@
     "exchange": "XETR",
     "industry": "Airlines",
     "sector": "Industrials",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -1.16
   },
   {
     "code": "DTE.de",
@@ -2240,7 +2385,8 @@
     "exchange": "XETR",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -2.64
   },
   {
     "code": "6146.jp",
@@ -2256,7 +2402,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Semiconductor Equipment & Materials",
     "sector": "Technology",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 1.77
   },
   {
     "code": "DIS.us",
@@ -2272,7 +2419,8 @@
     "exchange": "NYSE",
     "industry": "Entertainment",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.59
   },
   {
     "code": "DIS.ext",
@@ -2288,7 +2436,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Entertainment",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.59
   },
   {
     "code": "DOL.ca",
@@ -2304,7 +2453,8 @@
     "exchange": "Stock Exchange",
     "industry": "Discount Stores",
     "sector": "Consumer Defensive",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -1.48
   },
   {
     "code": "DONG.hk",
@@ -2317,7 +2467,8 @@
     "changeAmount": 5.2,
     "change52W": 76.75,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 1.18
   },
   {
     "code": "DASH.us",
@@ -2333,7 +2484,8 @@
     "exchange": "NYSE",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.11
   },
   {
     "code": "DASH.ext",
@@ -2349,7 +2501,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.11
   },
   {
     "code": "DKNG.us",
@@ -2365,7 +2518,8 @@
     "exchange": "NASDAQ",
     "industry": "Gambling",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.31
   },
   {
     "code": "DKNG.ext",
@@ -2381,7 +2535,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Gambling",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.31
   },
   {
     "code": "EBAY.us",
@@ -2397,7 +2552,8 @@
     "exchange": "NASDAQ",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.52
   },
   {
     "code": "EA.us",
@@ -2413,7 +2569,8 @@
     "exchange": "NASDAQ",
     "industry": "Electronic Gaming & Multimedia",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.01
   },
   {
     "code": "LLY.us",
@@ -2429,7 +2586,8 @@
     "exchange": "NYSE",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.49
   },
   {
     "code": "EMA.ca",
@@ -2445,7 +2603,8 @@
     "exchange": "Stock Exchange",
     "industry": "Utilities - Regulated Electric",
     "sector": "Utilities",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.34
   },
   {
     "code": "ENB.ca",
@@ -2461,7 +2620,8 @@
     "exchange": "Stock Exchange",
     "industry": "Oil & Gas Midstream",
     "sector": "Energy",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.36
   },
   {
     "code": "ETSY.us",
@@ -2477,7 +2637,8 @@
     "exchange": "NASDAQ",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.09
   },
   {
     "code": "ETSY.ext",
@@ -2493,7 +2654,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.09
   },
   {
     "code": "XOM.us",
@@ -2509,7 +2671,8 @@
     "exchange": "NYSE",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.39
   },
   {
     "code": "XOM.ext",
@@ -2525,7 +2688,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.39
   },
   {
     "code": "6954.jp",
@@ -2541,7 +2705,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Specialty Industrial Machinery",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -0.38
   },
   {
     "code": "9983.jp",
@@ -2557,7 +2722,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Apparel Retail",
     "sector": "Consumer Cyclical",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.21
   },
   {
     "code": "FM.ca",
@@ -2573,7 +2739,8 @@
     "exchange": "Stock Exchange",
     "industry": "Copper",
     "sector": "Basic Materials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -4.68
   },
   {
     "code": "FSLR.us",
@@ -2589,7 +2756,8 @@
     "exchange": "NASDAQ",
     "industry": "Solar",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.47
   },
   {
     "code": "FSV.ca",
@@ -2605,7 +2773,8 @@
     "exchange": "Stock Exchange",
     "industry": "Real Estate Services",
     "sector": "Real Estate",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -1.51
   },
   {
     "code": "FLAT.hk",
@@ -2618,7 +2787,8 @@
     "changeAmount": 1.19,
     "change52W": 71.86,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 0.48
   },
   {
     "code": "F.us",
@@ -2634,7 +2804,8 @@
     "exchange": "NYSE",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.39
   },
   {
     "code": "F.ext",
@@ -2650,7 +2821,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.39
   },
   {
     "code": "FTS.ca",
@@ -2666,7 +2838,8 @@
     "exchange": "Stock Exchange",
     "industry": "Utilities - Regulated Electric",
     "sector": "Utilities",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.62
   },
   {
     "code": "FNV.ca",
@@ -2682,7 +2855,8 @@
     "exchange": "Stock Exchange",
     "industry": "Gold",
     "sector": "Basic Materials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -3.09
   },
   {
     "code": "FCX.us",
@@ -2698,7 +2872,8 @@
     "exchange": "NYSE",
     "industry": "Copper",
     "sector": "Basic Materials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.44
   },
   {
     "code": "FCX.ext",
@@ -2714,7 +2889,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Copper",
     "sector": "Basic Materials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.44
   },
   {
     "code": "GALA.hk",
@@ -2727,7 +2903,8 @@
     "changeAmount": -9.73,
     "change52W": 8.44,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -3.08
   },
   {
     "code": "GME.us",
@@ -2743,7 +2920,8 @@
     "exchange": "NYSE",
     "industry": "Specialty Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.2
   },
   {
     "code": "GME.ext",
@@ -2759,7 +2937,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Specialty Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.2
   },
   {
     "code": "GELY.hk",
@@ -2772,7 +2951,8 @@
     "changeAmount": -2.7,
     "change52W": -27.36,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -1.16
   },
   {
     "code": "GE.us",
@@ -2788,7 +2968,8 @@
     "exchange": "NYSE",
     "industry": "Aerospace & Defense",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -6.02
   },
   {
     "code": "GE.ext",
@@ -2804,7 +2985,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Aerospace & Defense",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -6.02
   },
   {
     "code": "GM.us",
@@ -2820,7 +3002,8 @@
     "exchange": "NYSE",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.93
   },
   {
     "code": "GM.ext",
@@ -2836,7 +3019,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.93
   },
   {
     "code": "WN.ca",
@@ -2852,7 +3036,8 @@
     "exchange": "Stock Exchange",
     "industry": "Grocery Stores",
     "sector": "Consumer Defensive",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.75
   },
   {
     "code": "GIL.ca",
@@ -2868,7 +3053,8 @@
     "exchange": "Stock Exchange",
     "industry": "Apparel Manufacturing",
     "sector": "Consumer Cyclical",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.8
   },
   {
     "code": "GILD.us",
@@ -2884,7 +3070,8 @@
     "exchange": "NASDAQ",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.05
   },
   {
     "code": "GILD.ext",
@@ -2900,7 +3087,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.05
   },
   {
     "code": "GSK.uk",
@@ -2916,7 +3104,8 @@
     "exchange": "LSE",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.83
   },
   {
     "code": "GLEN.uk",
@@ -2929,7 +3118,8 @@
     "changeAmount": 5.79,
     "change52W": -28.98,
     "product": "Share",
-    "exchange": "LSE"
+    "exchange": "LSE",
+    "dailyChangePct": 1.32
   },
   {
     "code": "GS.us",
@@ -2945,7 +3135,8 @@
     "exchange": "NYSE",
     "industry": "Capital Markets",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.42
   },
   {
     "code": "1112.hk",
@@ -2961,7 +3152,8 @@
     "exchange": "HKEX",
     "industry": "Packaged Foods",
     "sector": "Consumer Defensive",
-    "currency": "HKD"
+    "currency": "HKD",
+    "dailyChangePct": -1.24
   },
   {
     "code": "TIGE.hk",
@@ -2974,7 +3166,8 @@
     "changeAmount": 2.24,
     "change52W": 1.84,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 2.91
   },
   {
     "code": "HOG.us",
@@ -2990,7 +3183,8 @@
     "exchange": "NYSE",
     "industry": "Recreational Vehicles",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.29
   },
   {
     "code": "HEIA.nl",
@@ -3006,7 +3200,8 @@
     "exchange": "EURONEXT",
     "industry": "Beverages - Brewers",
     "sector": "Consumer Defensive",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -2.06
   },
   {
     "code": "HLT.us",
@@ -3022,7 +3217,8 @@
     "exchange": "NYSE",
     "industry": "Lodging",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.73
   },
   {
     "code": "6501.jp",
@@ -3038,7 +3234,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Conglomerates",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 0.7
   },
   {
     "code": "NONG.hk",
@@ -3051,7 +3248,8 @@
     "changeAmount": 5.44,
     "change52W": 50.69,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 3.81
   },
   {
     "code": "HD.us",
@@ -3067,7 +3265,8 @@
     "exchange": "NYSE",
     "industry": "Home Improvement Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.15
   },
   {
     "code": "7267.jp",
@@ -3083,7 +3282,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 0.07
   },
   {
     "code": "HKEX.hk",
@@ -3096,7 +3296,8 @@
     "changeAmount": 7.6,
     "change52W": -1.88,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 3.54
   },
   {
     "code": "HSBA.uk",
@@ -3109,7 +3310,8 @@
     "changeAmount": 4.77,
     "change52W": 44.11,
     "product": "Share",
-    "exchange": "LSE"
+    "exchange": "LSE",
+    "dailyChangePct": 1.1
   },
   {
     "code": "HSBC.hk",
@@ -3122,7 +3324,8 @@
     "changeAmount": -2.77,
     "change52W": 33.47,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -1.06
   },
   {
     "code": "HUT.us",
@@ -3138,7 +3341,8 @@
     "exchange": "NASDAQ",
     "industry": "Capital Markets",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.91
   },
   {
     "code": "H.us",
@@ -3154,7 +3358,8 @@
     "exchange": "NYSE",
     "industry": "Lodging",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.55
   },
   {
     "code": "H.ca",
@@ -3170,7 +3375,8 @@
     "exchange": "Stock Exchange",
     "industry": "Utilities - Regulated Electric",
     "sector": "Utilities",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.79
   },
   {
     "code": "ICBC.hk",
@@ -3183,7 +3389,8 @@
     "changeAmount": -7.23,
     "change52W": 26.02,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -2.44
   },
   {
     "code": "IMCD.nl",
@@ -3199,7 +3406,8 @@
     "exchange": "EURONEXT",
     "industry": "Specialty Chemicals",
     "sector": "Basic Materials",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": 1.65
   },
   {
     "code": "IMO.ca",
@@ -3215,7 +3423,8 @@
     "exchange": "Stock Exchange",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.45
   },
   {
     "code": "IFX.de",
@@ -3231,7 +3440,8 @@
     "exchange": "XETR",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.54
   },
   {
     "code": "INGA.nl",
@@ -3247,7 +3457,8 @@
     "exchange": "EURONEXT",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": null
   },
   {
     "code": "IIPR.us",
@@ -3263,7 +3474,8 @@
     "exchange": "NYSE",
     "industry": "REIT - Industrial",
     "sector": "Real Estate",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.58
   },
   {
     "code": "IFC.ca",
@@ -3279,7 +3491,8 @@
     "exchange": "Stock Exchange",
     "industry": "Insurance - Property & Casualty",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.21
   },
   {
     "code": "INTC.us",
@@ -3295,7 +3508,8 @@
     "exchange": "NASDAQ",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.29
   },
   {
     "code": "INTC.ext",
@@ -3311,7 +3525,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.29
   },
   {
     "code": "IQ.us",
@@ -3327,7 +3542,8 @@
     "exchange": "NASDAQ",
     "industry": "Entertainment",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -5.0
   },
   {
     "code": "JD.hk",
@@ -3340,7 +3556,8 @@
     "changeAmount": -2.69,
     "change52W": 70.68,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -1.57
   },
   {
     "code": "JD.us",
@@ -3356,7 +3573,8 @@
     "exchange": "NASDAQ",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.36
   },
   {
     "code": "JD.ext",
@@ -3372,7 +3590,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.36
   },
   {
     "code": "JBLU.us",
@@ -3388,7 +3607,8 @@
     "exchange": "NASDAQ",
     "industry": "Airlines",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.52
   },
   {
     "code": "5411.jp",
@@ -3404,7 +3624,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Steel",
     "sector": "Basic Materials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.33
   },
   {
     "code": "CPER.hk",
@@ -3417,7 +3638,8 @@
     "changeAmount": -6.84,
     "change52W": 26.91,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -7.47
   },
   {
     "code": "JNJ.us",
@@ -3433,7 +3655,8 @@
     "exchange": "NYSE",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.99
   },
   {
     "code": "JNJ.ext",
@@ -3449,7 +3672,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.99
   },
   {
     "code": "JPM.us",
@@ -3465,7 +3689,8 @@
     "exchange": "NYSE",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.59
   },
   {
     "code": "JPM.ext",
@@ -3481,7 +3706,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.59
   },
   {
     "code": "9107.jp",
@@ -3497,7 +3723,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Marine Shipping",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -0.06
   },
   {
     "code": "9433.jp",
@@ -3513,7 +3740,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 0.27
   },
   {
     "code": "BEKE.us",
@@ -3529,7 +3757,8 @@
     "exchange": "NYSE",
     "industry": "Real Estate Services",
     "sector": "Real Estate",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.76
   },
   {
     "code": "6861.jp",
@@ -3545,7 +3774,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Scientific & Technical Instruments",
     "sector": "Technology",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.34
   },
   {
     "code": "KIDE.hk",
@@ -3558,7 +3788,8 @@
     "changeAmount": -1.11,
     "change52W": 6.77,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -0.25
   },
   {
     "code": "KSOF.hk",
@@ -3571,7 +3802,8 @@
     "changeAmount": 2.96,
     "change52W": 31.3,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 0.68
   },
   {
     "code": "K.ca",
@@ -3587,7 +3819,8 @@
     "exchange": "Stock Exchange",
     "industry": "Gold",
     "sector": "Basic Materials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -4.56
   },
   {
     "code": "KGC.us",
@@ -3603,7 +3836,8 @@
     "exchange": "NYSE",
     "industry": "Gold",
     "sector": "Basic Materials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.47
   },
   {
     "code": "KGC.ext",
@@ -3619,7 +3853,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Gold",
     "sector": "Basic Materials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.47
   },
   {
     "code": "KUAI.hk",
@@ -3632,7 +3867,8 @@
     "changeAmount": -0.83,
     "change52W": 39.55,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -0.32
   },
   {
     "code": "LVS.us",
@@ -3648,7 +3884,8 @@
     "exchange": "NYSE",
     "industry": "Resorts & Casinos",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.21
   },
   {
     "code": "LI.us",
@@ -3664,7 +3901,8 @@
     "exchange": "NASDAQ",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.39
   },
   {
     "code": "LI.ext",
@@ -3680,7 +3918,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.39
   },
   {
     "code": "LLOY.uk",
@@ -3693,7 +3932,8 @@
     "changeAmount": 6.14,
     "change52W": 74.87,
     "product": "Share",
-    "exchange": "LSE"
+    "exchange": "LSE",
+    "dailyChangePct": 6.25
   },
   {
     "code": "L.ca",
@@ -3709,7 +3949,8 @@
     "exchange": "Stock Exchange",
     "industry": "Grocery Stores",
     "sector": "Consumer Defensive",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.6
   },
   {
     "code": "LMT.us",
@@ -3725,7 +3966,8 @@
     "exchange": "NYSE",
     "industry": "Aerospace & Defense",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.75
   },
   {
     "code": "LMT.ext",
@@ -3741,7 +3983,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Aerospace & Defense",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.75
   },
   {
     "code": "OR.fr",
@@ -3757,7 +4000,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Household & Personal Products",
     "sector": "Consumer Defensive",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -1.65
   },
   {
     "code": "MC.fr",
@@ -3773,7 +4017,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Luxury Goods",
     "sector": "Consumer Cyclical",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.93
   },
   {
     "code": "LCID.us",
@@ -3789,7 +4034,8 @@
     "exchange": "NASDAQ",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 9.5
   },
   {
     "code": "LCID.ext",
@@ -3805,7 +4051,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 9.5
   },
   {
     "code": "LU.us",
@@ -3821,7 +4068,8 @@
     "exchange": "NYSE",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.53
   },
   {
     "code": "LYFT.us",
@@ -3837,7 +4085,8 @@
     "exchange": "NASDAQ",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 2.43
   },
   {
     "code": "LYFT.ext",
@@ -3853,7 +4102,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 2.43
   },
   {
     "code": "MG.ca",
@@ -3869,7 +4119,8 @@
     "exchange": "Stock Exchange",
     "industry": "Auto Parts",
     "sector": "Consumer Cyclical",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.58
   },
   {
     "code": "MFC.ca",
@@ -3885,7 +4136,8 @@
     "exchange": "Stock Exchange",
     "industry": "Insurance - Life",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.09
   },
   {
     "code": "MARA.us",
@@ -3901,7 +4153,8 @@
     "exchange": "NASDAQ",
     "industry": "Capital Markets",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.44
   },
   {
     "code": "MARA.ext",
@@ -3917,7 +4170,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Capital Markets",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.44
   },
   {
     "code": "MAR.us",
@@ -3933,7 +4187,8 @@
     "exchange": "NASDAQ",
     "industry": "Lodging",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.25
   },
   {
     "code": "8002.jp",
@@ -3949,7 +4204,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Conglomerates",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 1.97
   },
   {
     "code": "MRVL.us",
@@ -3965,7 +4221,8 @@
     "exchange": "NASDAQ",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 2.6
   },
   {
     "code": "MRVL.ext",
@@ -3981,7 +4238,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 2.6
   },
   {
     "code": "MA.us",
@@ -3997,7 +4255,8 @@
     "exchange": "NYSE",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.77
   },
   {
     "code": "MA.ext",
@@ -4013,7 +4272,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.77
   },
   {
     "code": "MCD.us",
@@ -4029,7 +4289,8 @@
     "exchange": "NYSE",
     "industry": "Restaurants",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.0
   },
   {
     "code": "MCD.ext",
@@ -4045,7 +4306,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Restaurants",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.0
   },
   {
     "code": "MEIT.hk",
@@ -4058,7 +4320,8 @@
     "changeAmount": 5.33,
     "change52W": 65.11,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 1.68
   },
   {
     "code": "4385.jp",
@@ -4074,7 +4337,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 3.29
   },
   {
     "code": "MBG.de",
@@ -4090,7 +4354,8 @@
     "exchange": "XETR",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -1.65
   },
   {
     "code": "MRK.de",
@@ -4106,7 +4371,8 @@
     "exchange": "XETR",
     "industry": "Drug Manufacturers - Specialty & Generic",
     "sector": "Healthcare",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.04
   },
   {
     "code": "META.us",
@@ -4122,7 +4388,8 @@
     "exchange": "NASDAQ",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.03
   },
   {
     "code": "META.ext",
@@ -4138,7 +4405,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.03
   },
   {
     "code": "MRU.ca",
@@ -4154,7 +4422,8 @@
     "exchange": "Stock Exchange",
     "industry": "Grocery Stores",
     "sector": "Consumer Defensive",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.72
   },
   {
     "code": "MGM.us",
@@ -4170,7 +4439,8 @@
     "exchange": "NYSE",
     "industry": "Resorts & Casinos",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.28
   },
   {
     "code": "ML.fr",
@@ -4186,7 +4456,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": null,
     "sector": null,
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.87
   },
   {
     "code": "MU.us",
@@ -4202,7 +4473,8 @@
     "exchange": "NASDAQ",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.08
   },
   {
     "code": "MU.ext",
@@ -4218,7 +4490,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.08
   },
   {
     "code": "MSFT.us",
@@ -4234,7 +4507,8 @@
     "exchange": "NASDAQ",
     "industry": "Software - Infrastructure",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.78
   },
   {
     "code": "MSFT.ext",
@@ -4250,7 +4524,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Software - Infrastructure",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.78
   },
   {
     "code": "MSTR.us",
@@ -4266,7 +4541,8 @@
     "exchange": "NASDAQ",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.82
   },
   {
     "code": "4188.jp",
@@ -4282,7 +4558,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Specialty Chemicals",
     "sector": "Basic Materials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 0.75
   },
   {
     "code": "8058.jp",
@@ -4298,7 +4575,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Conglomerates",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.34
   },
   {
     "code": "7011.jp",
@@ -4314,7 +4592,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Specialty Industrial Machinery",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 0.36
   },
   {
     "code": "8306.jp",
@@ -4330,7 +4609,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.39
   },
   {
     "code": "8031.jp",
@@ -4346,7 +4626,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Conglomerates",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -0.96
   },
   {
     "code": "9104.jp",
@@ -4362,7 +4643,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Marine Shipping",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -0.29
   },
   {
     "code": "8411.jp",
@@ -4378,7 +4660,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Banks - Regional",
     "sector": "Financial Services",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.89
   },
   {
     "code": "MRNA.us",
@@ -4394,7 +4677,8 @@
     "exchange": "NASDAQ",
     "industry": "Biotechnology",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.13
   },
   {
     "code": "MRNA.ext",
@@ -4410,7 +4694,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Biotechnology",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.13
   },
   {
     "code": "MP.us",
@@ -4426,7 +4711,8 @@
     "exchange": "NYSE",
     "industry": "Other Industrial Metals & Mining",
     "sector": "Basic Materials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.41
   },
   {
     "code": "6981.jp",
@@ -4442,7 +4728,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Electronic Components",
     "sector": "Technology",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 1.52
   },
   {
     "code": "NA.ca",
@@ -4458,7 +4745,8 @@
     "exchange": "Stock Exchange",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.26
   },
   {
     "code": "NWG.uk",
@@ -4474,7 +4762,8 @@
     "exchange": "LSE",
     "industry": "Banks - Regional",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.45
   },
   {
     "code": "NETE.hk",
@@ -4487,7 +4776,8 @@
     "changeAmount": -9.21,
     "change52W": 14.64,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -1.88
   },
   {
     "code": "NTES.us",
@@ -4503,7 +4793,8 @@
     "exchange": "NASDAQ",
     "industry": "Electronic Gaming & Multimedia",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.88
   },
   {
     "code": "NFLX.ext",
@@ -4519,7 +4810,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Entertainment",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.62
   },
   {
     "code": "NFLX.us",
@@ -4535,7 +4827,8 @@
     "exchange": "NASDAQ",
     "industry": "Entertainment",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.62
   },
   {
     "code": "NXE.us",
@@ -4551,7 +4844,8 @@
     "exchange": "NYSE",
     "industry": "Uranium",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.62
   },
   {
     "code": "6594.jp",
@@ -4567,7 +4861,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Specialty Industrial Machinery",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.29
   },
   {
     "code": "NKE.us",
@@ -4583,7 +4878,8 @@
     "exchange": "NYSE",
     "industry": "Footwear & Accessories",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.52
   },
   {
     "code": "NKE.ext",
@@ -4599,7 +4895,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Footwear & Accessories",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.52
   },
   {
     "code": "7974.jp",
@@ -4615,7 +4912,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Electronic Gaming & Multimedia",
     "sector": "Communication Services",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -0.92
   },
   {
     "code": "NIO.us",
@@ -4631,7 +4929,8 @@
     "exchange": "NYSE",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.1
   },
   {
     "code": "NIO.ext",
@@ -4647,7 +4946,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.1
   },
   {
     "code": "5401.jp",
@@ -4663,7 +4963,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Steel",
     "sector": "Basic Materials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.1
   },
   {
     "code": "9432.jp",
@@ -4679,7 +4980,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -0.78
   },
   {
     "code": "9101.jp",
@@ -4695,7 +4997,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Marine Shipping",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -0.61
   },
   {
     "code": "NOK.us",
@@ -4711,7 +5014,8 @@
     "exchange": "NYSE",
     "industry": "Communication Equipment",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.51
   },
   {
     "code": "NCLH.us",
@@ -4727,7 +5031,8 @@
     "exchange": "NYSE",
     "industry": "Travel Services",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.41
   },
   {
     "code": "NCLH.ext",
@@ -4743,7 +5048,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Travel Services",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.41
   },
   {
     "code": "NU.us",
@@ -4759,7 +5065,8 @@
     "exchange": "NYSE",
     "industry": "Banks - Regional",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.07
   },
   {
     "code": "NU.ext",
@@ -4775,7 +5082,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Banks - Regional",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.07
   },
   {
     "code": "NTR.ca",
@@ -4791,7 +5099,8 @@
     "exchange": "Stock Exchange",
     "industry": "Agricultural Inputs",
     "sector": "Basic Materials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 1.3
   },
   {
     "code": "NVDA.us",
@@ -4807,7 +5116,8 @@
     "exchange": "NASDAQ",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.58
   },
   {
     "code": "NVDA.ext",
@@ -4823,7 +5133,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.58
   },
   {
     "code": "OXY.us",
@@ -4839,7 +5150,8 @@
     "exchange": "NYSE",
     "industry": "Oil & Gas E&P",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.85
   },
   {
     "code": "OXY.ext",
@@ -4855,7 +5167,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Oil & Gas E&P",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.85
   },
   {
     "code": "OTEX.ca",
@@ -4871,7 +5184,8 @@
     "exchange": "Stock Exchange",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.56
   },
   {
     "code": "ORCL.us",
@@ -4887,7 +5201,8 @@
     "exchange": "NYSE",
     "industry": "Software - Infrastructure",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 2.97
   },
   {
     "code": "ORA.fr",
@@ -4903,7 +5218,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.51
   },
   {
     "code": "4661.jp",
@@ -4919,7 +5235,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Leisure",
     "sector": "Consumer Cyclical",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.15
   },
   {
     "code": "PLTR.us",
@@ -4935,7 +5252,8 @@
     "exchange": "NYSE",
     "industry": "Software - Infrastructure",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.9
   },
   {
     "code": "PLTR.ext",
@@ -4951,7 +5269,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Software - Infrastructure",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.9
   },
   {
     "code": "PYPL.us",
@@ -4967,7 +5286,8 @@
     "exchange": "NASDAQ",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.23
   },
   {
     "code": "PYPL.ext",
@@ -4983,7 +5303,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.23
   },
   {
     "code": "PDD.ext",
@@ -4999,7 +5320,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.14
   },
   {
     "code": "BTU.us",
@@ -5015,7 +5337,8 @@
     "exchange": "NYSE",
     "industry": "Thermal Coal",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 2.18
   },
   {
     "code": "PTON.us",
@@ -5031,7 +5354,8 @@
     "exchange": "NASDAQ",
     "industry": "Leisure",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.25
   },
   {
     "code": "PPL.ca",
@@ -5047,7 +5371,8 @@
     "exchange": "Stock Exchange",
     "industry": "Oil & Gas Midstream",
     "sector": "Energy",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.41
   },
   {
     "code": "PENN.ext",
@@ -5063,7 +5388,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Resorts & Casinos",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.41
   },
   {
     "code": "PENN.us",
@@ -5079,7 +5405,8 @@
     "exchange": "NASDAQ",
     "industry": "Resorts & Casinos",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.41
   },
   {
     "code": "PBR.us",
@@ -5095,7 +5422,8 @@
     "exchange": "NYSE",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 2.02
   },
   {
     "code": "PBR.ext",
@@ -5111,7 +5439,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 2.02
   },
   {
     "code": "PFE.ext",
@@ -5127,7 +5456,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.25
   },
   {
     "code": "PFE.us",
@@ -5143,7 +5473,8 @@
     "exchange": "NYSE",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.25
   },
   {
     "code": "PDD.us",
@@ -5159,7 +5490,8 @@
     "exchange": "NASDAQ",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.14
   },
   {
     "code": "PING.hk",
@@ -5172,7 +5504,8 @@
     "changeAmount": -2.03,
     "change52W": 51.13,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -0.6
   },
   {
     "code": "PLUG.us",
@@ -5188,7 +5521,8 @@
     "exchange": "NASDAQ",
     "industry": "Electrical Equipment & Parts",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.35
   },
   {
     "code": "PLUG.ext",
@@ -5204,7 +5538,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Electrical Equipment & Parts",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.35
   },
   {
     "code": "POW.ca",
@@ -5220,7 +5555,8 @@
     "exchange": "Stock Exchange",
     "industry": "Insurance - Life",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.29
   },
   {
     "code": "PG.us",
@@ -5236,7 +5572,8 @@
     "exchange": "NYSE",
     "industry": "Household & Personal Products",
     "sector": "Consumer Defensive",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.07
   },
   {
     "code": "PG.ext",
@@ -5252,7 +5589,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Household & Personal Products",
     "sector": "Consumer Defensive",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.07
   },
   {
     "code": "QCOM.us",
@@ -5268,7 +5606,8 @@
     "exchange": "NASDAQ",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.58
   },
   {
     "code": "QCOM.ext",
@@ -5284,7 +5623,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.58
   },
   {
     "code": "6098.jp",
@@ -5300,7 +5640,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 2.99
   },
   {
     "code": "RDDT.us",
@@ -5316,7 +5657,8 @@
     "exchange": "NYSE",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.89
   },
   {
     "code": "RNO.fr",
@@ -5332,7 +5674,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.51
   },
   {
     "code": "QSR.ca",
@@ -5348,7 +5691,8 @@
     "exchange": "Stock Exchange",
     "industry": "Restaurants",
     "sector": "Consumer Cyclical",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.05
   },
   {
     "code": "RIOT.us",
@@ -5364,7 +5708,8 @@
     "exchange": "NASDAQ",
     "industry": "Capital Markets",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.37
   },
   {
     "code": "RIOT.ext",
@@ -5380,7 +5725,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Capital Markets",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.37
   },
   {
     "code": "RIVN.us",
@@ -5396,7 +5742,8 @@
     "exchange": "NASDAQ",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.24
   },
   {
     "code": "RIVN.ext",
@@ -5412,7 +5759,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.24
   },
   {
     "code": "HOOD.us",
@@ -5428,7 +5776,8 @@
     "exchange": "NASDAQ",
     "industry": "Capital Markets",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -4.29
   },
   {
     "code": "RBLX.us",
@@ -5444,7 +5793,8 @@
     "exchange": "NYSE",
     "industry": "Electronic Gaming & Multimedia",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.58
   },
   {
     "code": "RBLX.ext",
@@ -5460,7 +5810,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Electronic Gaming & Multimedia",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.58
   },
   {
     "code": "RCIB.ca",
@@ -5473,7 +5824,8 @@
     "changeAmount": 7.38,
     "change52W": 22.64,
     "product": "Share",
-    "exchange": "Stock Exchange"
+    "exchange": "Stock Exchange",
+    "dailyChangePct": 2.53
   },
   {
     "code": "RR.uk",
@@ -5489,7 +5841,8 @@
     "exchange": "LSE",
     "industry": "Specialty Industrial Machinery",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.56
   },
   {
     "code": "RY.ca",
@@ -5505,7 +5858,8 @@
     "exchange": "Stock Exchange",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.8
   },
   {
     "code": "RCL.us",
@@ -5521,7 +5875,8 @@
     "exchange": "NYSE",
     "industry": "Travel Services",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.11
   },
   {
     "code": "RWE.de",
@@ -5537,7 +5892,8 @@
     "exchange": "XETR",
     "industry": "Utilities - Diversified",
     "sector": "Utilities",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": 1.57
   },
   {
     "code": "CRM.us",
@@ -5553,7 +5909,8 @@
     "exchange": "NYSE",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.91
   },
   {
     "code": "CRM.ext",
@@ -5569,7 +5926,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.91
   },
   {
     "code": "SAN.fr",
@@ -5585,7 +5943,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Drug Manufacturers - General",
     "sector": "Healthcare",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -1.23
   },
   {
     "code": "SAP.de",
@@ -5601,7 +5960,8 @@
     "exchange": "XETR",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": 0.64
   },
   {
     "code": "SAP.ca",
@@ -5617,7 +5977,8 @@
     "exchange": "Stock Exchange",
     "industry": "Packaged Foods",
     "sector": "Consumer Defensive",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.55
   },
   {
     "code": "8473.jp",
@@ -5633,7 +5994,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Financial Conglomerates",
     "sector": "Financial Services",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -2.22
   },
   {
     "code": "SLB.ext",
@@ -5649,7 +6011,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Oil & Gas Equipment & Services",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.57
   },
   {
     "code": "SLB.us",
@@ -5665,7 +6028,8 @@
     "exchange": "NYSE",
     "industry": "Oil & Gas Equipment & Services",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.57
   },
   {
     "code": "SU.fr",
@@ -5681,7 +6045,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Specialty Industrial Machinery",
     "sector": "Industrials",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.55
   },
   {
     "code": "SE.us",
@@ -5697,7 +6062,8 @@
     "exchange": "NYSE",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.25
   },
   {
     "code": "SE.ext",
@@ -5713,7 +6079,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.25
   },
   {
     "code": "6753.jp",
@@ -5729,7 +6096,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Consumer Electronics",
     "sector": "Technology",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -0.29
   },
   {
     "code": "SHEL.uk",
@@ -5745,7 +6113,8 @@
     "exchange": "LSE",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.86
   },
   {
     "code": "4063.jp",
@@ -5761,7 +6130,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Chemicals",
     "sector": "Basic Materials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -0.59
   },
   {
     "code": "SHOP.us",
@@ -5777,7 +6147,8 @@
     "exchange": "NYSE",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.16
   },
   {
     "code": "SHOP.ext",
@@ -5793,7 +6164,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.16
   },
   {
     "code": "SHOP.ca",
@@ -5809,7 +6181,8 @@
     "exchange": "Stock Exchange",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -1.2
   },
   {
     "code": "SIE.de",
@@ -5825,7 +6198,8 @@
     "exchange": "XETR",
     "industry": "Specialty Industrial Machinery",
     "sector": "Industrials",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.39
   },
   {
     "code": "ENR.de",
@@ -5841,7 +6215,8 @@
     "exchange": "XETR",
     "industry": "Specialty Industrial Machinery",
     "sector": "Industrials",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -1.13
   },
   {
     "code": "SBIO.hk",
@@ -5854,7 +6229,8 @@
     "changeAmount": 1.34,
     "change52W": -13.98,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 0.45
   },
   {
     "code": "SIRI.us",
@@ -5870,7 +6246,8 @@
     "exchange": "NASDAQ",
     "industry": "Entertainment",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.73
   },
   {
     "code": "SIRI.ext",
@@ -5886,7 +6263,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Entertainment",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.73
   },
   {
     "code": "SMOO.hk",
@@ -5899,7 +6277,8 @@
     "changeAmount": 7.97,
     "change52W": -8.11,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 9.14
   },
   {
     "code": "SNAP.us",
@@ -5915,7 +6294,8 @@
     "exchange": "NYSE",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -5.0
   },
   {
     "code": "SNAP.ext",
@@ -5931,7 +6311,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -5.0
   },
   {
     "code": "SNOW.us",
@@ -5947,7 +6328,8 @@
     "exchange": "NYSE",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.08
   },
   {
     "code": "SNOW.ext",
@@ -5963,7 +6345,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.08
   },
   {
     "code": "GLE.fr",
@@ -5979,7 +6362,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Banks - Regional",
     "sector": "Financial Services",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -1.27
   },
   {
     "code": "SOFI.us",
@@ -5995,7 +6379,8 @@
     "exchange": "NASDAQ",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.8
   },
   {
     "code": "SOFI.ext",
@@ -6011,7 +6396,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.8
   },
   {
     "code": "9984.jp",
@@ -6027,7 +6413,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 8.53
   },
   {
     "code": "SONY.us",
@@ -6043,7 +6430,8 @@
     "exchange": "NYSE",
     "industry": "Consumer Electronics",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.33
   },
   {
     "code": "6758.jp",
@@ -6059,7 +6447,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Consumer Electronics",
     "sector": "Technology",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.12
   },
   {
     "code": "LUV.us",
@@ -6075,7 +6464,8 @@
     "exchange": "NYSE",
     "industry": "Airlines",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.25
   },
   {
     "code": "LUV.ext",
@@ -6091,7 +6481,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Airlines",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.25
   },
   {
     "code": "SPOT.us",
@@ -6107,7 +6498,8 @@
     "exchange": "NYSE",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.66
   },
   {
     "code": "SBUX.us",
@@ -6123,7 +6515,8 @@
     "exchange": "NASDAQ",
     "industry": "Restaurants",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.53
   },
   {
     "code": "SBUX.ext",
@@ -6139,7 +6532,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Restaurants",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.53
   },
   {
     "code": "STLA.us",
@@ -6155,7 +6549,8 @@
     "exchange": "NYSE",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.23
   },
   {
     "code": "STLA.ext",
@@ -6171,7 +6566,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.23
   },
   {
     "code": "STLA.fr",
@@ -6184,7 +6580,8 @@
     "changeAmount": 4.91,
     "change52W": 34.11,
     "product": "Share",
-    "exchange": "EURONEXT - Paris"
+    "exchange": "EURONEXT - Paris",
+    "dailyChangePct": 9.2
   },
   {
     "code": "STM.fr",
@@ -6197,7 +6594,8 @@
     "changeAmount": 6.08,
     "change52W": 47.69,
     "product": "Share",
-    "exchange": "EURONEXT - Paris"
+    "exchange": "EURONEXT - Paris",
+    "dailyChangePct": 5.46
   },
   {
     "code": "8053.jp",
@@ -6213,7 +6611,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Conglomerates",
     "sector": "Industrials",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -0.17
   },
   {
     "code": "8316.jp",
@@ -6229,7 +6628,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.87
   },
   {
     "code": "SLF.ca",
@@ -6245,7 +6645,8 @@
     "exchange": "Stock Exchange",
     "industry": "Insurance - Diversified",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.06
   },
   {
     "code": "SU.ca",
@@ -6261,7 +6662,8 @@
     "exchange": "Stock Exchange",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 1.15
   },
   {
     "code": "SUNN.hk",
@@ -6274,7 +6676,8 @@
     "changeAmount": -8.4,
     "change52W": -1.09,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": -3.49
   },
   {
     "code": "SMCI.us",
@@ -6290,7 +6693,8 @@
     "exchange": "NASDAQ",
     "industry": "Computer Hardware",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.84
   },
   {
     "code": "7269.jp",
@@ -6306,7 +6710,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.35
   },
   {
     "code": "TSM.us",
@@ -6322,7 +6727,8 @@
     "exchange": "NYSE",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.37
   },
   {
     "code": "TSM.ext",
@@ -6338,7 +6744,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.37
   },
   {
     "code": "4502.jp",
@@ -6354,7 +6761,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Drug Manufacturers - Specialty & Generic",
     "sector": "Healthcare",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -1.56
   },
   {
     "code": "TTWO.us",
@@ -6370,7 +6778,8 @@
     "exchange": "NASDAQ",
     "industry": "Electronic Gaming & Multimedia",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.24
   },
   {
     "code": "TGT.us",
@@ -6386,7 +6795,8 @@
     "exchange": "NYSE",
     "industry": "Discount Stores",
     "sector": "Consumer Defensive",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.01
   },
   {
     "code": "TRP.ca",
@@ -6402,7 +6812,8 @@
     "exchange": "Stock Exchange",
     "industry": "Oil & Gas Midstream",
     "sector": "Energy",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -1.39
   },
   {
     "code": "TECKB.ca",
@@ -6415,7 +6826,8 @@
     "changeAmount": -0.8,
     "change52W": 39.68,
     "product": "Share",
-    "exchange": "Stock Exchange"
+    "exchange": "Stock Exchange",
+    "dailyChangePct": -0.9
   },
   {
     "code": "T.ca",
@@ -6431,7 +6843,8 @@
     "exchange": "Stock Exchange",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.18
   },
   {
     "code": "TENC.hk",
@@ -6444,7 +6857,8 @@
     "changeAmount": 9.52,
     "change52W": 74.17,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 2.96
   },
   {
     "code": "TME.us",
@@ -6460,7 +6874,8 @@
     "exchange": "NYSE",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.17
   },
   {
     "code": "TSCO.uk",
@@ -6476,7 +6891,8 @@
     "exchange": "LSE",
     "industry": "Specialty Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -9.66
   },
   {
     "code": "TSLA.us",
@@ -6492,7 +6908,8 @@
     "exchange": "NASDAQ",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.89
   },
   {
     "code": "TSLA.ext",
@@ -6508,7 +6925,8 @@
     "exchange": "NASDAQ - Extended",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.89
   },
   {
     "code": "TXN.us",
@@ -6524,7 +6942,8 @@
     "exchange": "NASDAQ",
     "industry": "Semiconductors",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.56
   },
   {
     "code": "BNS.ca",
@@ -6540,7 +6959,8 @@
     "exchange": "Stock Exchange",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.23
   },
   {
     "code": "TD.ca",
@@ -6556,7 +6976,8 @@
     "exchange": "Stock Exchange",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.47
   },
   {
     "code": "TRI.ca",
@@ -6572,7 +6993,8 @@
     "exchange": "Stock Exchange",
     "industry": "Specialty Business Services",
     "sector": "Industrials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 2.24
   },
   {
     "code": "TMUS.us",
@@ -6588,7 +7010,8 @@
     "exchange": "NASDAQ",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.6
   },
   {
     "code": "8035.jp",
@@ -6604,7 +7027,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Semiconductor Equipment & Materials",
     "sector": "Technology",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": 3.46
   },
   {
     "code": "TTE.fr",
@@ -6620,7 +7044,8 @@
     "exchange": "EURONEXT - Paris",
     "industry": "Oil & Gas Integrated",
     "sector": "Energy",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": 0.83
   },
   {
     "code": "TOU.ca",
@@ -6636,7 +7061,8 @@
     "exchange": "Stock Exchange",
     "industry": "Oil & Gas E&P",
     "sector": "Energy",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": 0.12
   },
   {
     "code": "7203.jp",
@@ -6652,7 +7078,8 @@
     "exchange": "Tokyo Stock Exchange",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "JPY"
+    "currency": "JPY",
+    "dailyChangePct": -3.24
   },
   {
     "code": "RIG.us",
@@ -6668,7 +7095,8 @@
     "exchange": "NYSE",
     "industry": "Oil & Gas Drilling",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.02
   },
   {
     "code": "RIG.ext",
@@ -6684,7 +7112,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Oil & Gas Drilling",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.02
   },
   {
     "code": "TCOM.us",
@@ -6700,7 +7129,8 @@
     "exchange": "NASDAQ",
     "industry": "Travel Services",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.62
   },
   {
     "code": "TRIP.us",
@@ -6716,7 +7146,8 @@
     "exchange": "NASDAQ",
     "industry": "Travel Services",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.17
   },
   {
     "code": "DWAC.us",
@@ -6729,7 +7160,8 @@
     "changeAmount": -8.14,
     "change52W": -23.34,
     "product": "Share",
-    "exchange": "NASDAQ"
+    "exchange": "NASDAQ",
+    "dailyChangePct": -5.15
   },
   {
     "code": "TWLO.us",
@@ -6745,7 +7177,8 @@
     "exchange": "NYSE",
     "industry": "Software - Infrastructure",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.15
   },
   {
     "code": "UBER.us",
@@ -6761,7 +7194,8 @@
     "exchange": "NYSE",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.19
   },
   {
     "code": "UBER.ext",
@@ -6777,7 +7211,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.19
   },
   {
     "code": "UAL.us",
@@ -6793,7 +7228,8 @@
     "exchange": "NASDAQ",
     "industry": "Airlines",
     "sector": "Industrials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.86
   },
   {
     "code": "UNH.us",
@@ -6809,7 +7245,8 @@
     "exchange": "NYSE",
     "industry": "Healthcare Plans",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 7.58
   },
   {
     "code": "UEC.us",
@@ -6825,7 +7262,8 @@
     "exchange": "NYSE ARCA",
     "industry": "Uranium",
     "sector": "Energy",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.64
   },
   {
     "code": "VALE.ext",
@@ -6841,7 +7279,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Other Industrial Metals & Mining",
     "sector": "Basic Materials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.68
   },
   {
     "code": "VALE.us",
@@ -6857,7 +7296,8 @@
     "exchange": "NYSE",
     "industry": "Other Industrial Metals & Mining",
     "sector": "Basic Materials",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.68
   },
   {
     "code": "VZ.us",
@@ -6873,7 +7313,8 @@
     "exchange": "NYSE",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.67
   },
   {
     "code": "VZ.ext",
@@ -6889,7 +7330,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.67
   },
   {
     "code": "VRTX.us",
@@ -6905,7 +7347,8 @@
     "exchange": "NASDAQ",
     "industry": "Biotechnology",
     "sector": "Healthcare",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.13
   },
   {
     "code": "V.us",
@@ -6921,7 +7364,8 @@
     "exchange": "NYSE",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.11
   },
   {
     "code": "V.ext",
@@ -6937,7 +7381,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Credit Services",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.11
   },
   {
     "code": "VOD.uk",
@@ -6953,7 +7398,8 @@
     "exchange": "LSE",
     "industry": "Telecom Services",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -2.56
   },
   {
     "code": "VOW.de",
@@ -6969,7 +7415,8 @@
     "exchange": "XETR",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -0.86
   },
   {
     "code": "VNA.de",
@@ -6985,7 +7432,8 @@
     "exchange": "XETR",
     "industry": "Real Estate Services",
     "sector": "Real Estate",
-    "currency": "EUR"
+    "currency": "EUR",
+    "dailyChangePct": -1.3
   },
   {
     "code": "WMT.us",
@@ -7001,7 +7449,8 @@
     "exchange": "NYSE",
     "industry": "Discount Stores",
     "sector": "Consumer Defensive",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.91
   },
   {
     "code": "WMT.ext",
@@ -7017,7 +7466,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Discount Stores",
     "sector": "Consumer Defensive",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 0.91
   },
   {
     "code": "WCN.ca",
@@ -7033,7 +7483,8 @@
     "exchange": "Stock Exchange",
     "industry": "Waste Management",
     "sector": "Industrials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -1.35
   },
   {
     "code": "W.us",
@@ -7049,7 +7500,8 @@
     "exchange": "NYSE",
     "industry": "Internet Retail",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.68
   },
   {
     "code": "WB.us",
@@ -7065,7 +7517,8 @@
     "exchange": "NASDAQ",
     "industry": "Internet Content & Information",
     "sector": "Communication Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -1.37
   },
   {
     "code": "WFC.us",
@@ -7081,7 +7534,8 @@
     "exchange": "NYSE",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.22
   },
   {
     "code": "WFC.ext",
@@ -7097,7 +7551,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Banks - Diversified",
     "sector": "Financial Services",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.22
   },
   {
     "code": "WPM.ca",
@@ -7113,7 +7568,8 @@
     "exchange": "Stock Exchange",
     "industry": "Gold",
     "sector": "Basic Materials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -3.22
   },
   {
     "code": "WSP.ca",
@@ -7129,7 +7585,8 @@
     "exchange": "Stock Exchange",
     "industry": "Engineering & Construction",
     "sector": "Industrials",
-    "currency": "CAD"
+    "currency": "CAD",
+    "dailyChangePct": -0.79
   },
   {
     "code": "WUXI.hk",
@@ -7142,7 +7599,8 @@
     "changeAmount": 0.82,
     "change52W": 67.7,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 0.33
   },
   {
     "code": "WYNN.us",
@@ -7158,7 +7616,8 @@
     "exchange": "NASDAQ",
     "industry": "Resorts & Casinos",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -0.93
   },
   {
     "code": "XIAO.hk",
@@ -7171,7 +7630,8 @@
     "changeAmount": 2.05,
     "change52W": 63.29,
     "product": "Share",
-    "exchange": "HKEX"
+    "exchange": "HKEX",
+    "dailyChangePct": 0.78
   },
   {
     "code": "XPEV.us",
@@ -7187,7 +7647,8 @@
     "exchange": "NYSE",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.2
   },
   {
     "code": "XPEV.ext",
@@ -7203,7 +7664,8 @@
     "exchange": "NYSE - Extended",
     "industry": "Auto Manufacturers",
     "sector": "Consumer Cyclical",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": -3.2
   },
   {
     "code": "ZM.us",
@@ -7219,6 +7681,7 @@
     "exchange": "NASDAQ",
     "industry": "Software - Application",
     "sector": "Technology",
-    "currency": "USD"
+    "currency": "USD",
+    "dailyChangePct": 1.93
   }
 ]
