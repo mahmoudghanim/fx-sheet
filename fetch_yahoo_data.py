@@ -239,11 +239,14 @@ def update_stock_data_with_yahoo(progress_callback=None):
                 stock['week52High'] = round(data['fiftyTwoWeekHigh'], 2) if data['fiftyTwoWeekHigh'] else None
                 stock['changeAmount'] = round(data['regularMarketChange'], 2) if data['regularMarketChange'] else None
                 
-                # Convert change percent
+                # Save daily change percentage (from regularMarketChangePercent)
                 if data['regularMarketChangePercent']:
-                    stock['change52W'] = round(data['regularMarketChangePercent'], 2)
+                    stock['dailyChangePct'] = round(data['regularMarketChangePercent'], 2)
                 else:
-                    stock['change52W'] = None
+                    stock['dailyChangePct'] = None
+                
+                # Keep change52W for backward compatibility (will need 52-week data source)
+                stock['change52W'] = stock['dailyChangePct']  # For now, use daily change
                 
                 # Add industry and sector
                 stock['industry'] = data.get('industry')

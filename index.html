@@ -661,6 +661,7 @@
                         <th data-column="currency" data-type="string">Currency</th>
                         <th data-column="price" data-type="number">Current Price</th>
                         <th data-column="volume" data-type="number">Volume</th>
+                        <th data-column="dailyChangePct" data-type="number">Daily Change %</th>
                         <th data-column="week52Low" data-type="number">52 Week Low</th>
                         <th data-column="week52High" data-type="number">52 Week High</th>
                         <th data-column="changeAmount" data-type="number">Change (Amount)</th>
@@ -669,7 +670,7 @@
                 </thead>
                 <tbody id="stocksBody">
                     <tr>
-                        <td colspan="11" class="loading">Loading stock data...</td>
+                        <td colspan="12" class="loading">Loading stock data...</td>
                     </tr>
                 </tbody>
             </table>
@@ -943,7 +944,7 @@
             tbody.innerHTML = '';
 
             if (data.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="11" class="no-results">No stocks match your filters</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="12" class="no-results">No stocks match your filters</td></tr>';
                 document.getElementById('filteredStocks').textContent = '0';
                 updatePagination(0);
                 return;
@@ -972,6 +973,7 @@
                     <td><span class="currency-badge">${stock.currency || 'N/A'}</span></td>
                     <td>$${formatNumber(stock.price)}</td>
                     <td>${formatVolume(stock.volume)}</td>
+                    <td class="${getChangeClass(stock.dailyChangePct)}">${stock.dailyChangePct > 0 ? '+' : ''}${formatPercentage(stock.dailyChangePct)}</td>
                     <td>$${formatNumber(stock.week52Low)}</td>
                     <td>$${formatNumber(stock.week52High)}</td>
                     <td class="${getChangeClass(changeAmount)}">${changeAmount > 0 ? '+' : ''}${formatNumber(changeAmount)}</td>
@@ -1399,6 +1401,7 @@
                 volume: parseInt(document.getElementById('addVolume').value) || null,
                 week52Low: parseFloat(document.getElementById('addWeek52Low').value) || null,
                 week52High: parseFloat(document.getElementById('addWeek52High').value) || null,
+                dailyChangePct: null,
                 changeAmount: null,
                 change52W: null,
                 product: 'Share'
@@ -1527,6 +1530,7 @@
                                 volume: stock.volume || null,
                                 week52Low: stock.week52Low || null,
                                 week52High: stock.week52High || null,
+                                dailyChangePct: stock.dailyChangePct || null,
                                 changeAmount: stock.changeAmount || null,
                                 change52W: stock.change52W || null,
                                 product: stock.product || 'Share'
