@@ -171,6 +171,29 @@
             color: #92400e;
         }
 
+        .session-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .session-asia {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .session-europe {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+        }
+
+        .session-america {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
         .loading {
             text-align: center;
             padding: 40px;
@@ -607,6 +630,15 @@
                     </select>
                 </div>
                 <div class="filter-group">
+                    <label>🕐 Session</label>
+                    <select id="sessionFilter">
+                        <option value="">All Sessions</option>
+                        <option value="Asia">🌏 Asia</option>
+                        <option value="Europe">🌍 Europe</option>
+                        <option value="America">🌎 America</option>
+                    </select>
+                </div>
+                <div class="filter-group">
                     <label>🏭 Industry</label>
                     <select id="industryFilter">
                         <option value="">All Industries</option>
@@ -658,6 +690,7 @@
                         <th data-column="name" data-type="string">Company Name</th>
                         <th data-column="industry" data-type="string">Industry</th>
                         <th data-column="country" data-type="string">Country</th>
+                        <th data-column="session" data-type="string">Session</th>
                         <th data-column="currency" data-type="string">Currency</th>
                         <th data-column="price" data-type="number">Current Price</th>
                         <th data-column="volume" data-type="number">Volume</th>
@@ -670,7 +703,7 @@
                 </thead>
                 <tbody id="stocksBody">
                     <tr>
-                        <td colspan="12" class="loading">Loading stock data...</td>
+                        <td colspan="13" class="loading">Loading stock data...</td>
                     </tr>
                 </tbody>
             </table>
@@ -944,7 +977,7 @@
             tbody.innerHTML = '';
 
             if (data.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="12" class="no-results">No stocks match your filters</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="13" class="no-results">No stocks match your filters</td></tr>';
                 document.getElementById('filteredStocks').textContent = '0';
                 updatePagination(0);
                 return;
@@ -970,6 +1003,7 @@
                     <td><a href="https://finance.yahoo.com/quote/${getYahooSymbol(stock.code)}" target="_blank" class="stock-link">${stock.name || 'N/A'}</a></td>
                     <td>${stock.industry || 'N/A'}</td>
                     <td><span class="country-badge">${abbreviateCountry(stock.country)}</span></td>
+                    <td><span class="session-badge session-${(stock.session || '').toLowerCase()}">${stock.session || 'N/A'}</span></td>
                     <td><span class="currency-badge">${stock.currency || 'N/A'}</span></td>
                     <td>$${formatNumber(stock.price)}</td>
                     <td>${formatVolume(stock.volume)}</td>
@@ -1046,6 +1080,7 @@
         function applyFilters() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
             const country = document.getElementById('countryFilter').value;
+            const session = document.getElementById('sessionFilter').value;
             const industry = document.getElementById('industryFilter').value;
             const currency = document.getElementById('currencyFilter').value;
             const minPrice = parseFloat(document.getElementById('minPrice').value);
@@ -1064,6 +1099,9 @@
 
                 // Country filter
                 if (country && stock.country !== country) return false;
+
+                // Session filter
+                if (session && stock.session !== session) return false;
 
                 // Industry filter
                 if (industry && stock.industry !== industry) return false;
@@ -1168,6 +1206,7 @@
         function clearFilters() {
             document.getElementById('searchInput').value = '';
             document.getElementById('countryFilter').value = '';
+            document.getElementById('sessionFilter').value = '';
             document.getElementById('industryFilter').value = '';
             document.getElementById('currencyFilter').value = '';
             document.getElementById('minPrice').value = '';
