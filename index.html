@@ -210,6 +210,90 @@
             flex-wrap: wrap;
         }
 
+        .session-clock {
+            display: flex;
+            gap: 15px;
+            padding: 10px 15px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            border-bottom: 2px solid #3b82f6;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .session-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .session-item.open {
+            background-color: rgba(34, 197, 94, 0.2);
+            border: 1px solid #22c55e;
+        }
+
+        .session-item.closed {
+            background-color: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            opacity: 0.6;
+        }
+
+        .session-icon {
+            font-size: 1.2rem;
+        }
+
+        .session-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .session-name {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #93c5fd;
+            text-transform: uppercase;
+        }
+
+        .session-status {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .session-item.open .session-status {
+            color: #22c55e;
+        }
+
+        .session-time {
+            font-size: 0.7rem;
+            color: #93c5fd;
+            margin-top: 2px;
+        }
+
+        .market-summary {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+        }
+
+        .market-summary-label {
+            font-size: 0.75rem;
+            color: #93c5fd;
+        }
+
+        .market-summary-value {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: white;
+        }
+
         .stat-item {
             text-align: center;
             padding: 5px;
@@ -597,6 +681,38 @@
                 <button class="btn btn-secondary" onclick="toggleManagement()" style="padding: 8px 16px; font-size: 0.9rem;">⚙️ Manage Stocks</button>
             </div>
         </header>
+
+        <!-- Session Clock -->
+        <div class="session-clock" id="sessionClock">
+            <div class="session-item" id="asiaSession">
+                <span class="session-icon">🌏</span>
+                <div class="session-info">
+                    <span class="session-name">Asia</span>
+                    <span class="session-status">Loading...</span>
+                    <span class="session-time">Tokyo: 9:00-15:00 JST</span>
+                </div>
+            </div>
+            <div class="session-item" id="europeSession">
+                <span class="session-icon">🌍</span>
+                <div class="session-info">
+                    <span class="session-name">Europe</span>
+                    <span class="session-status">Loading...</span>
+                    <span class="session-time">London: 8:00-16:30 GMT</span>
+                </div>
+            </div>
+            <div class="session-item" id="americaSession">
+                <span class="session-icon">🌎</span>
+                <div class="session-info">
+                    <span class="session-name">America</span>
+                    <span class="session-status">Loading...</span>
+                    <span class="session-time">New York: 9:30-16:00 EST</span>
+                </div>
+            </div>
+            <div class="market-summary">
+                <span class="market-summary-label">Markets Open:</span>
+                <span class="market-summary-value" id="marketsOpen">-</span>
+            </div>
+        </div>
 
         <div class="stats-bar">
             <div class="stat-item">
@@ -1339,6 +1455,98 @@
 
         // Auto-refresh every 5 minutes (optional)
         setInterval(loadStockData, 300000);
+
+        // Session Clock Update
+        function updateSessionClock() {
+            const now = new Date();
+            const utcHours = now.getUTCHours();
+            const utcMinutes = now.getUTCMinutes();
+            const dayOfWeek = now.getUTCDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+            
+            // Convert to minutes for easier comparison
+            const currentMinutes = utcHours * 60 + utcMinutes;
+            const isWeekday = dayOfWeek >= 1 && dayOfWeek <= 5;
+            
+            // Session times in UTC
+            // Asia (Tokyo): 00:00 - 06:00 UTC (9:00-15:00 JST)
+            const asiaStart = 0;     // 00:00 UTC
+            const asiaEnd = 360;     // 06:00 UTC
+            
+            // Europe (London): 08:00 - 16:30 UTC
+            const europeStart = 480;  // 08:00 UTC
+            const europeEnd = 990;    // 16:30 UTC
+            
+            // America (New York): 14:30 - 21:00 UTC (9:30-16:00 EST)
+            const americaStart = 870;  // 14:30 UTC
+            const americaEnd = 1260;   // 21:00 UTC
+            
+            // Check if sessions are open
+            const asiaOpen = isWeekday && currentMinutes >= asiaStart && currentMinutes < asiaEnd;
+            const europeOpen = isWeekday && currentMinutes >= europeStart && currentMinutes < europeEnd;
+            const americaOpen = isWeekday && currentMinutes >= americaStart && currentMinutes < americaEnd;
+            
+            // Update Asia session
+            const asiaEl = document.getElementById('asiaSession');
+            const asiaStatus = asiaEl.querySelector('.session-status');
+            if (asiaOpen) {
+                asiaEl.className = 'session-item open';
+                const timeLeft = asiaEnd - currentMinutes;
+                const hours = Math.floor(timeLeft / 60);
+                const mins = timeLeft % 60;
+                asiaStatus.textContent = `OPEN (closes in ${hours}h ${mins}m)`;
+            } else {
+                asiaEl.className = 'session-item closed';
+                if (!isWeekday) {
+                    asiaStatus.textContent = 'CLOSED (Weekend)';
+                } else {
+                    asiaStatus.textContent = 'CLOSED';
+                }
+            }
+            
+            // Update Europe session
+            const europeEl = document.getElementById('europeSession');
+            const europeStatus = europeEl.querySelector('.session-status');
+            if (europeOpen) {
+                europeEl.className = 'session-item open';
+                const timeLeft = europeEnd - currentMinutes;
+                const hours = Math.floor(timeLeft / 60);
+                const mins = timeLeft % 60;
+                europeStatus.textContent = `OPEN (closes in ${hours}h ${mins}m)`;
+            } else {
+                europeEl.className = 'session-item closed';
+                if (!isWeekday) {
+                    europeStatus.textContent = 'CLOSED (Weekend)';
+                } else {
+                    europeStatus.textContent = 'CLOSED';
+                }
+            }
+            
+            // Update America session
+            const americaEl = document.getElementById('americaSession');
+            const americaStatus = americaEl.querySelector('.session-status');
+            if (americaOpen) {
+                americaEl.className = 'session-item open';
+                const timeLeft = americaEnd - currentMinutes;
+                const hours = Math.floor(timeLeft / 60);
+                const mins = timeLeft % 60;
+                americaStatus.textContent = `OPEN (closes in ${hours}h ${mins}m)`;
+            } else {
+                americaEl.className = 'session-item closed';
+                if (!isWeekday) {
+                    americaStatus.textContent = 'CLOSED (Weekend)';
+                } else {
+                    americaStatus.textContent = 'CLOSED';
+                }
+            }
+            
+            // Update market summary
+            const openCount = [asiaOpen, europeOpen, americaOpen].filter(Boolean).length;
+            document.getElementById('marketsOpen').textContent = `${openCount}/3`;
+        }
+
+        // Update session clock immediately and then every second
+        updateSessionClock();
+        setInterval(updateSessionClock, 1000);
 
         // Pagination functions
         function updatePagination(total, start = 1, end = 0) {
