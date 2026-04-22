@@ -128,6 +128,9 @@ def fetch_stock_batch(symbols, max_retries=2):
                     'sector': info.get('sector'),
                     'industry': info.get('industry'),
                     'currency': info.get('currency'),
+                    'shortName': info.get('shortName'),  # Company name
+                    'longName': info.get('longName'),    # Full company name
+                    'exchange': info.get('exchange'),
                 }
                 
                 batch_data[symbol] = data
@@ -247,6 +250,12 @@ def update_stock_data_with_yahoo(progress_callback=None):
                 
                 # Keep change52W for backward compatibility (will need 52-week data source)
                 stock['change52W'] = stock['dailyChangePct']  # For now, use daily change
+                
+                # Update company name from Yahoo Finance
+                if data.get('shortName'):
+                    stock['name'] = data['shortName']
+                elif data.get('longName'):
+                    stock['name'] = data['longName']
                 
                 # Add industry and sector
                 stock['industry'] = data.get('industry')
