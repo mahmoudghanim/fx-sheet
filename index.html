@@ -680,6 +680,7 @@
             <div style="margin-top: 10px;">
                 <button class="btn btn-secondary" onclick="toggleManagement()" style="padding: 8px 16px; font-size: 0.9rem;">⚙️ Manage Stocks</button>
                 <a href="symbol-mappings-manager.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem; text-decoration: none; margin-left: 10px;">🔗 Fix Symbols</a>
+                <span id="githubTokenStatus" style="margin-left: 15px; font-size: 0.85rem; color: #718096;">🔑 GitHub: Not connected</span>
             </div>
         </header>
 
@@ -1452,7 +1453,21 @@
         }
 
         // Initialize
-        document.addEventListener('DOMContentLoaded', loadStockData);
+        document.addEventListener('DOMContentLoaded', function() {
+            loadStockData();
+            updateGithubTokenStatus();
+        });
+
+        // Update GitHub token status display
+        function updateGithubTokenStatus() {
+            const token = localStorage.getItem('github_token');
+            const statusEl = document.getElementById('githubTokenStatus');
+            if (token) {
+                statusEl.innerHTML = '🔑 GitHub: <span style="color: #22c55e; font-weight: 600;">Connected</span>';
+            } else {
+                statusEl.innerHTML = '🔑 GitHub: <span style="color: #f59e0b; font-weight: 600;">Not connected (will prompt when saving)</span>';
+            }
+        }
 
         // Auto-refresh every 5 minutes (optional)
         setInterval(loadStockData, 300000);
@@ -1623,7 +1638,7 @@
             }
         }
 
-        function addStock() {
+        async function addStock() {
             const code = document.getElementById('addCode').value.trim();
             const name = document.getElementById('addName').value.trim();
             
@@ -1652,24 +1667,31 @@
                 dailyChangePct: null,
                 changeAmount: null,
                 change52W: null,
-                product: 'Share'
+                product: 'Share',
+                session: 'America'
             };
             
             stocksData.push(newStock);
-            saveStockData();
             
-            showMessage('addSuccess', '✅ Stock added successfully! Refreshing dashboard...');
-            clearAddForm();
+            showMessage('addSuccess', '⏳ Adding stock and saving to GitHub...');
+            const saved = await saveStockData();
             
-            // Refresh the dashboard
-            filteredData = [...stocksData];
-            populateCountryFilter();
-            populateIndustryFilter();
-            populateCurrencyFilter();
-            renderTable(filteredData);
-            populateRemoveList();
-            
-            setTimeout(() => hideMessage('addSuccess'), 3000);
+            if (saved) {
+                showMessage('addSuccess', `✅ ${code} added successfully and saved to GitHub!`);
+                clearAddForm();
+                
+                // Refresh the dashboard
+                filteredData = [...stocksData];
+                populateCountryFilter();
+                populateIndustryFilter();
+                populateCurrencyFilter();
+                renderTable(filteredData);
+                populateRemoveList();
+                
+                setTimeout(() => hideMessage('addSuccess'), 5000);
+            } else {
+                showMessage('addError', '❌ Failed to save to GitHub. Please check your token.');
+            }
         }
 
         function clearAddForm() {
@@ -1723,24 +1745,32 @@
             });
         }
 
-        function removeStock(index) {
+        async function removeStock(index) {
             const stock = stocksData[index];
             
             if (confirm(`Are you sure you want to remove "${stock.code} - ${stock.name}"?`)) {
                 stocksData.splice(index, 1);
-                saveStockData();
                 
-                showMessage('removeSuccess', `✅ ${stock.code} removed successfully!`);
+                showMessage('removeSuccess', '⏳ Removing stock and saving to GitHub...');
+                const saved = await saveStockData();
                 
-                // Refresh the dashboard
-                filteredData = [...stocksData];
-                populateCountryFilter();
-                populateIndustryFilter();
-                populateCurrencyFilter();
-                renderTable(filteredData);
-                populateRemoveList();
-                
-                setTimeout(() => hideMessage('removeSuccess'), 3000);
+                if (saved) {
+                    showMessage('removeSuccess', `✅ ${stock.code} removed successfully and saved to GitHub!`);
+                    
+                    // Refresh the dashboard
+                    filteredData = [...stocksData];
+                    populateCountryFilter();
+                    populateIndustryFilter();
+                    populateCurrencyFilter();
+                    renderTable(filteredData);
+                    populateRemoveList();
+                    
+                    setTimeout(() => hideMessage('removeSuccess'), 5000);
+                } else {
+                    showMessage('removeError', '❌ Failed to save to GitHub. Please check your token.');
+                    // Re-add the stock since save failed
+                    stocksData.splice(index, 0, stock);
+                }
             }
         }
 
@@ -1819,29 +1849,76 @@
             link.click();
         }
 
-        function saveStockData() {
-            // Save to server via API
-            fetch('/api/save-stocks', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(stocksData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Stock data saved successfully:', data.message);
-            })
-            .catch(error => {
-                console.error('Error saving stock data:', error);
-                // Fallback to localStorage
-                try {
-                    localStorage.setItem('stocksData', JSON.stringify(stocksData));
-                    console.log('Stock data saved to localStorage as fallback');
-                } catch (e) {
-                    console.error('Error saving to localStorage:', e);
+        async function saveStockData() {
+            // Save directly to GitHub via API
+            try {
+                let token = localStorage.getItem('github_token');
+                
+                if (!token) {
+                    token = prompt('Enter your GitHub Personal Access Token to save changes:\n\nYou can create one at:\nhttps://github.com/settings/tokens\n\nToken needs "repo" scope.\n\nThis is a one-time setup.');
+                    if (!token) {
+                        alert('Token is required to save changes to GitHub');
+                        return false;
+                    }
+                    localStorage.setItem('github_token', token);
                 }
-            });
+
+                const content = JSON.stringify(stocksData, null, 2);
+                const repoOwner = 'mahmoudghanim';
+                const repoName = 'fx-sheet';
+                const filePath = 'stocks-data.json';
+                
+                // Step 1: Get the current file SHA
+                const getFileResponse = await fetch(
+                    `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`,
+                    {
+                        headers: {
+                            'Authorization': `token ${token}`,
+                            'Accept': 'application/vnd.github.v3+json'
+                        }
+                    }
+                );
+
+                if (!getFileResponse.ok) {
+                    throw new Error('Failed to get file info: ' + getFileResponse.status);
+                }
+
+                const fileInfo = await getFileResponse.json();
+                const sha = fileInfo.sha;
+
+                // Step 2: Update the file
+                const updateResponse = await fetch(
+                    `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`,
+                    {
+                        method: 'PUT',
+                        headers: {
+                            'Authorization': `token ${token}`,
+                            'Accept': 'application/vnd.github.v3+json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            message: '📊 Update stock data - add/remove stocks',
+                            content: btoa(content), // Base64 encode
+                            sha: sha,
+                            branch: 'main'
+                        })
+                    }
+                );
+
+                if (!updateResponse.ok) {
+                    const error = await updateResponse.json();
+                    throw new Error(error.message || 'Failed to update file');
+                }
+
+                console.log('Stock data saved to GitHub successfully');
+                return true;
+                
+            } catch (error) {
+                console.error('Error saving stock data:', error);
+                alert('Error saving to GitHub: ' + error.message);
+                localStorage.removeItem('github_token');
+                return false;
+            }
         }
 
         function showMessage(elementId, message) {
