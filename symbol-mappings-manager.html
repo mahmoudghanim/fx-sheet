@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol Mappings Manager - FX Sheet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .add-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 10px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 8px;
+        }
+
+        .add-form input {
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .add-form input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+            padding: 6px 12px;
+            font-size: 0.875rem;
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
+        .mappings-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .mappings-table th {
+            background: #f7fafc;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #4a5568;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .mappings-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .mappings-table tr:hover {
+            background: #f7fafc;
+        }
+
+        .fxcm-code {
+            font-family: monospace;
+            background: #fed7d7;
+            color: #c53030;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .yahoo-symbol {
+            font-family: monospace;
+            background: #c6f6d5;
+            color: #276749;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .info-box {
+            background: #ebf8ff;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .info-box h3 {
+            color: #2c5282;
+            margin-bottom: 8px;
+        }
+
+        .info-box p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #22c55e;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: none;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .count-badge {
+            background: #3b82f6;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔗 Symbol Mappings Manager</h1>
+            <p>Fix incorrect Yahoo Finance symbols for your stocks</p>
+        </div>
+
+        <div class="content">
+            <div class="info-box">
+                <h3>How to Use</h3>
+                <p>
+                    Add custom mappings to fix incorrect stock symbols. The system will use these mappings 
+                    instead of the automatic conversion when fetching data from Yahoo Finance.
+                </p>
+                <p style="margin-top: 8px;">
+                    <strong>Example:</strong> If "ABBV.us" is fetching wrong data, map it to the correct Yahoo symbol like "ABBV"
+                </p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>Current Mappings</h2>
+                <span class="count-badge" id="countBadge">0 mappings</span>
+            </div>
+
+            <div class="add-form">
+                <input type="text" id="fxcmCode" placeholder="FXCM Code (e.g., ABBV.us)" />
+                <input type="text" id="yahooSymbol" placeholder="Yahoo Symbol (e.g., ABBV)" />
+                <button class="btn btn-primary" onclick="addMapping()">+ Add Mapping</button>
+            </div>
+
+            <table class="mappings-table">
+                <thead>
+                    <tr>
+                        <th>FXCM Code</th>
+                        <th>Yahoo Finance Symbol</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="mappingsBody">
+                    <tr>
+                        <td colspan="3" style="text-align: center; padding: 40px; color: #718096;">
+                            Loading mappings...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a href="index.html" class="back-link">← Back to Dashboard</a>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        let mappingsData = {};
+
+        // Load mappings from file
+        async function loadMappings() {
+            try {
+                const response = await fetch('custom-symbol-mappings.json');
+                const data = await response.json();
+                mappingsData = data.mappings || {};
+                renderMappings();
+            } catch (error) {
+                console.error('Failed to load mappings:', error);
+                mappingsData = {};
+                renderMappings();
+            }
+        }
+
+        // Render mappings table
+        function renderMappings() {
+            const tbody = document.getElementById('mappingsBody');
+            const countBadge = document.getElementById('countBadge');
+            
+            const entries = Object.entries(mappingsData);
+            countBadge.textContent = `${entries.length} mapping${entries.length !== 1 ? 's' : ''}`;
+
+            if (entries.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="3" style="text-align: center; padding: 40px; color: #718096;">
+                            No custom mappings yet. Add one above to fix incorrect symbols.
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = entries.map(([fxcm, yahoo]) => `
+                <tr>
+                    <td><span class="fxcm-code">${fxcm}</span></td>
+                    <td><span class="yahoo-symbol">${yahoo}</span></td>
+                    <td>
+                        <button class="btn btn-danger" onclick="deleteMapping('${fxcm}')">Delete</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // Add new mapping
+        function addMapping() {
+            const fxcmCode = document.getElementById('fxcmCode').value.trim();
+            const yahooSymbol = document.getElementById('yahooSymbol').value.trim();
+
+            if (!fxcmCode || !yahooSymbol) {
+                showToast('Please fill in both fields', '#ef4444');
+                return;
+            }
+
+            mappingsData[fxcmCode] = yahooSymbol;
+            saveMappings();
+            renderMappings();
+            
+            document.getElementById('fxcmCode').value = '';
+            document.getElementById('yahooSymbol').value = '';
+            
+            showToast(`✓ Added mapping: ${fxcmCode} → ${yahooSymbol}`);
+        }
+
+        // Delete mapping
+        function deleteMapping(fxcmCode) {
+            if (confirm(`Delete mapping for ${fxcmCode}?`)) {
+                delete mappingsData[fxcmCode];
+                saveMappings();
+                renderMappings();
+                showToast(`✓ Deleted mapping for ${fxcmCode}`);
+            }
+        }
+
+        // Save mappings to file
+        async function saveMappings() {
+            const data = {
+                _comment: "Custom Yahoo Finance symbol mappings. Edit this file to fix incorrect symbols.",
+                _instructions: "Format: 'FXCM_SYMBOL': 'YAHOO_SYMBOL'. Example: 'ABBV.us': 'ABBV'",
+                mappings: mappingsData
+            };
+
+            // Since we can't directly write to file from browser, create a download
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'custom-symbol-mappings.json';
+            a.click();
+            URL.revokeObjectURL(url);
+
+            showToast('✓ File downloaded! Replace the old custom-symbol-mappings.json with this file');
+        }
+
+        // Show toast notification
+        function showToast(message, color = '#22c55e') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.style.background = color;
+            toast.style.display = 'block';
+            
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+
+        // Load on page load
+        document.addEventListener('DOMContentLoaded', loadMappings);
+
+        // Allow Enter key to add mapping
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && (e.target.id === 'fxcmCode' || e.target.id === 'yahooSymbol')) {
+                addMapping();
+            }
+        });
+    </script>
+</body>
+</html>

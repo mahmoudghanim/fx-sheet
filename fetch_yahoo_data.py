@@ -7,6 +7,7 @@ Supports batch processing with progress indication
 import json
 import sys
 import time
+import os
 import logging
 from datetime import datetime
 from pathlib import Path
@@ -40,6 +41,23 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Load custom symbol mappings if they exist
+CUSTOM_MAPPINGS_FILE = 'custom-symbol-mappings.json'
+
+def load_custom_mappings():
+    """Load custom Yahoo Finance symbol mappings from file"""
+    if os.path.exists(CUSTOM_MAPPINGS_FILE):
+        try:
+            with open(CUSTOM_MAPPINGS_FILE, 'r') as f:
+                data = json.load(f)
+                return data.get('mappings', {})
+        except Exception as e:
+            logger.warning(f"Failed to load custom mappings: {e}")
+    return {}
+
+# Load custom mappings at startup
+CUSTOM_MAPPINGS = load_custom_mappings()
+
 
 def fxcm_to_yahoo_symbol(fxcm_symbol):
     """
@@ -52,6 +70,12 @@ def fxcm_to_yahoo_symbol(fxcm_symbol):
     - AAPL.us -> AAPL
     - 7203.jp -> 7203.T (Tokyo)
     """
+    # Check custom mappings first
+    if fxcm_symbol in CUSTOM_MAPPINGS:
+        custom_symbol = CUSTOM_MAPPINGS[fxcm_symbol]
+        logger.info(f"Using custom mapping: {fxcm_symbol} -> {custom_symbol}")
+        return custom_symbol
+    
     if not fxcm_symbol or '.' not in fxcm_symbol:
         return fxcm_symbol
     

@@ -1,0 +1,14 @@
+{
+  "_comment": "Custom Yahoo Finance symbol mappings. Edit this file to fix incorrect symbols.",
+  "_instructions": "Format: 'FXCM_SYMBOL': 'YAHOO_SYMBOL'. Example: 'ABBV.us': 'ABBV'",
+  "mappings": {
+    "ABBV.us": "ABBV",
+    "ABN.nl": "ABN.AS",
+    "ADS.de": "ADS.DE",
+    "ADBE.us": "ADBE",
+    "AMD.us": "AMD",
+    "6857.jp": "6857.T",
+    "AEM.ca": "AEM.TO",
+    "BHP.au": "BHP.AX"
+  }
+}
