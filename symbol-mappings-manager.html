@@ -223,6 +223,27 @@
                 </p>
             </div>
 
+            <div class="info-box" style="background: #fef3c7; border-left-color: #f59e0b;">
+                <h3>⚙️ GitHub Token Setup (One-Time)</h3>
+                <p>
+                    To save mappings directly to GitHub, you need a Personal Access Token.
+                </p>
+                <p style="margin-top: 8px;">
+                    <strong>Steps:</strong><br>
+                    1. Go to <a href="https://github.com/settings/tokens" target="_blank" style="color: #2563eb;">GitHub Token Settings</a><br>
+                    2. Click "Generate new token (classic)"<br>
+                    3. Give it a name (e.g., "FX Sheet Manager")<br>
+                    4. Select scope: <strong>repo</strong> (full control of private repositories)<br>
+                    5. Click "Generate token" and copy it<br>
+                    6. Click the "Set Token" button below and paste your token
+                </p>
+                <div style="margin-top: 12px;">
+                    <button class="btn btn-primary" onclick="setupToken()" style="padding: 8px 16px; font-size: 0.875rem;">🔑 Set GitHub Token</button>
+                    <button class="btn btn-danger" onclick="clearToken()" style="padding: 8px 16px; font-size: 0.875rem; margin-left: 8px;">Clear Token</button>
+                    <span id="tokenStatus" style="margin-left: 12px; color: #718096; font-size: 0.875rem;">Token: Not set</span>
+                </div>
+            </div>
+
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                 <h2>Current Mappings</h2>
                 <span class="count-badge" id="countBadge">0 mappings</span>
@@ -334,7 +355,7 @@
             }
         }
 
-        // Save mappings to file
+        // Save mappings to GitHub directly
         async function saveMappings() {
             const data = {
                 _comment: "Custom Yahoo Finance symbol mappings. Edit this file to fix incorrect symbols.",
@@ -342,16 +363,76 @@
                 mappings: mappingsData
             };
 
-            // Since we can't directly write to file from browser, create a download
-            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'custom-symbol-mappings.json';
-            a.click();
-            URL.revokeObjectURL(url);
+            const content = JSON.stringify(data, null, 2);
+            
+            // Get GitHub token from localStorage or prompt user
+            let token = localStorage.getItem('github_token');
+            
+            if (!token) {
+                token = prompt('Enter your GitHub Personal Access Token:\n\nYou can create one at:\nhttps://github.com/settings/tokens\n\nToken needs "repo" scope.');
+                if (!token) {
+                    showToast('Token is required to save', '#ef4444');
+                    return;
+                }
+                localStorage.setItem('github_token', token);
+            }
 
-            showToast('✓ File downloaded! Replace the old custom-symbol-mappings.json with this file');
+            showToast('⏳ Saving to GitHub...', '#3b82f6');
+
+            try {
+                // Step 1: Get the current file SHA
+                const repoOwner = 'mahmoudghanim';
+                const repoName = 'fx-sheet';
+                const filePath = 'custom-symbol-mappings.json';
+                
+                const getFileResponse = await fetch(
+                    `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`,
+                    {
+                        headers: {
+                            'Authorization': `token ${token}`,
+                            'Accept': 'application/vnd.github.v3+json'
+                        }
+                    }
+                );
+
+                if (!getFileResponse.ok) {
+                    throw new Error('Failed to get file info: ' + getFileResponse.status);
+                }
+
+                const fileInfo = await getFileResponse.json();
+                const sha = fileInfo.sha;
+
+                // Step 2: Update the file
+                const updateResponse = await fetch(
+                    `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`,
+                    {
+                        method: 'PUT',
+                        headers: {
+                            'Authorization': `token ${token}`,
+                            'Accept': 'application/vnd.github.v3+json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            message: '🔗 Update custom symbol mappings',
+                            content: btoa(content), // Base64 encode
+                            sha: sha,
+                            branch: 'main'
+                        })
+                    }
+                );
+
+                if (!updateResponse.ok) {
+                    const error = await updateResponse.json();
+                    throw new Error(error.message || 'Failed to update file');
+                }
+
+                showToast('✓ Saved to GitHub successfully! The next data update will use these mappings');
+                
+            } catch (error) {
+                console.error('Save error:', error);
+                showToast('✗ Error: ' + error.message, '#ef4444');
+                localStorage.removeItem('github_token');
+            }
         }
 
         // Show toast notification
@@ -367,7 +448,42 @@
         }
 
         // Load on page load
-        document.addEventListener('DOMContentLoaded', loadMappings);
+        document.addEventListener('DOMContentLoaded', function() {
+            loadMappings();
+            updateTokenStatus();
+        });
+
+        // Setup GitHub token
+        function setupToken() {
+            const token = prompt('Enter your GitHub Personal Access Token:\n\nCreate one at: https://github.com/settings/tokens\n\nToken needs "repo" scope.');
+            if (token && token.trim()) {
+                localStorage.setItem('github_token', token.trim());
+                updateTokenStatus();
+                showToast('✓ Token saved successfully!');
+            }
+        }
+
+        // Clear GitHub token
+        function clearToken() {
+            if (confirm('Clear the saved GitHub token?')) {
+                localStorage.removeItem('github_token');
+                updateTokenStatus();
+                showToast('✓ Token cleared');
+            }
+        }
+
+        // Update token status display
+        function updateTokenStatus() {
+            const token = localStorage.getItem('github_token');
+            const statusEl = document.getElementById('tokenStatus');
+            if (token) {
+                // Show first and last 4 characters
+                const masked = token.substring(0, 4) + '...' + token.substring(token.length - 4);
+                statusEl.innerHTML = `Token: <span style="color: #22c55e; font-weight: 600;">✓ ${masked}</span>`;
+            } else {
+                statusEl.innerHTML = 'Token: <span style="color: #ef4444; font-weight: 600;">✗ Not set</span>';
+            }
+        }
 
         // Allow Enter key to add mapping
         document.addEventListener('keypress', function(e) {
